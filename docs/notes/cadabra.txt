@@ -29,7 +29,7 @@ Company with many system, who receives a lot of massive data
 5 Requirement: Data warehousing and visualizations for 
         bussiness analysis purposes
     With:
-        -Kinesos Firehose
+        -Kinesis Firehose
         -S3
         -AWS Glue
         -Athena
