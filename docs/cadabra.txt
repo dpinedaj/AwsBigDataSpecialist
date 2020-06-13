@@ -1,0 +1,39 @@
+Company with many system, who receives a lot of massive data
+1 Requirement: Order History from the data science mobile app
+    -With:
+        -EC2
+        -Kinesis streams
+        -Lambda
+        -DynamoDB
+        
+2 Requirement:  Product recomendations with machine learning model
+    -With:
+        -Kinesis firehose
+        -S3
+        -EMR
+
+3 Requirement: Operational system that alert an unexpected 
+    rate of orders coming inside of the server
+    -With:
+        -Kinesis data stream
+        -Kinesis data analytics
+        -Aws Lambda
+        -SNS
+
+4 Requirement: Analyze server log data in near-real-time
+    With:
+        -Kinesis Firehose
+        -ElasticSearch Service
+        -Kibana
+    
+5 Requirement: Data warehousing and visualizations for 
+        bussiness analysis purposes
+    With:
+        -Kinesos Firehose
+        -S3
+        -AWS Glue
+        -Athena
+        -Redshift
+        -QuickSight
+
+
