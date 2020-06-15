@@ -1,0 +1,12 @@
+#!/bin/bash
+
+aws_ssh_key_path="./mykey.pem"
+emr_hostname="ec2-54-200-239-185.compute-1.amazon.com"
+
+if [ $1 -eq "o" ]; then
+    com="ssh -o TCPKeepAlive=yes -o ServerAliveInterval=30 \
+-i  $aws_ssh_key_path hadoop@$emr_hostname"
+else
+    com="ssh -i $aws_ssh_key_path hadoop@$emr_hostname"
+fi
+eval $com

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+com="wget http://emr-kinesis.s3.amazonaws.com/publisher/kinesis-log4j-appender-1.0.0.jar"
+
+eval $com

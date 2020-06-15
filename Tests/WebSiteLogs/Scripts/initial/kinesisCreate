@@ -1,0 +1,10 @@
+#!/bin/bash
+
+name="AccessLogStream"
+shard_count=1
+
+com="aws kinesis create-stream \
+    --stream-name $name \
+    --shard-count $shard_count"
+    
+eval $com

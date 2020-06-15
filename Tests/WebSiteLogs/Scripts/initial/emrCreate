@@ -1,0 +1,20 @@
+#!/bin/bash
+
+name="demo"
+type="m3.xlarge"
+instance_count="2"
+release_label="emr-4.1.0"
+aws_ssh_key= #Write your ssh key name with out (.pem) i.e. my_key_name
+app1="Hive"
+app2="Spark"
+
+com="aws emr create-cluster \
+    --name '$name' \
+    --instance-type $type \
+    --instance-count $instance_count \
+    --release-label $release_label \
+    --ec2-attributes KeyName=$aws_ssh_key \
+    --use-default-roles \
+    --applications Name=$app1 Nape=$app2"
+
+eval $com

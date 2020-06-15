@@ -1,0 +1,22 @@
+#!/bin/bash
+
+clus_ident="demo"
+db_name="demo"
+node_type="dc1.large"
+cluster_type="single-node"
+username="master"
+pwd="admin"
+port="8192"
+
+
+com="aws redshift create-cluster \
+    --cluster-identifier $clus_ident \
+    --db-name $db_name \
+    --node-type $node_type \
+    --cluster-type $cluster_type \
+    --master-username $username \
+    --master-user-password $pwd \
+    --publicly-accesible \
+    --port $port"
+
+eval $com

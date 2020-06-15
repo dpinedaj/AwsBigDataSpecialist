@@ -1,0 +1,9 @@
+#!/bin/bash
+
+redshift_endpoint="YOUR-REDSHIFT-ENDPOINT
+username="master"
+db_name="demo"
+
+com="psql -h $redshift_endpoint -p 8192 -U $username $db_name"
+
+eval $com

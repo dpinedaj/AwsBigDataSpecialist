@@ -1,0 +1,5 @@
+
+Big data aplication using kinesis, s3, emr and redshift to collect, process and analyze logs data
+    from a website
+Test source:
+    https://www.youtube.com/watch?v=08G9NfDETVE&feature=youtu.be

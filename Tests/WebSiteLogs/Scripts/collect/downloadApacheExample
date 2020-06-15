@@ -1,0 +1,5 @@
+#!/bin/bash
+
+com="wget http://elasticmapreduce.s3.amazonaws.com/samples/pig-apache/input/acces_log_1"
+
+eval $com

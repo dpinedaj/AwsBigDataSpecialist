@@ -1,0 +1,36 @@
+
+-->Initial Steps
+    - Create Kinesis service to capture streaming data
+    - Create s3 bucket to hold the files for amazon EMR procesing, plus input
+        files for Amazon Redshift
+    - Create an EMR 3-node cluster with Spark and Hive
+    - Create a single-node Amazon Redshift data warehouse
+
+
+-->Collect phase
+    -Download Log4J Appender //It grants the access to kinesis appending files
+    -Download the sample Apache log file
+    -Copy Apache log file with java //Using the log4j appender jar to upload files to kinesis
+    
+    -SSH login EMR cluster
+        -Download Amazon Kinesis client for spark
+        -Configure spark-defaults.conf and log4j.properties
+        -Start the spark shell including all the needed jars
+        -Run sparkStreamingEMR.scala script into the spark shell
+
+-->Process phase
+    -SSH Login EMR cluster
+        -Start the Spark SQL shell
+        -Create a table that points to the S3 bucket using the sql script
+        -Query some data with Spark SQL
+        -Create the transformed table to prepare the Redshift transformations
+        -Configure Hive partition and compression
+        -Write output to Amazon S3
+
+
+-->Analyze phase
+    -Connect to Amazon Redshift using the postgreSQL CLI
+        -Create Accesslogs table
+        -Copy data from s3 table "access-log-processed'
+        -Run test Queries
+        

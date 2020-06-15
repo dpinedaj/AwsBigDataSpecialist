@@ -1,0 +1,6 @@
+#!/bin/bash
+
+com="spark-sql --driver-java-options \
+'-Dlog4j.configuration=file:///etc/spark/conf/log4j.properties'"
+
+eval $com

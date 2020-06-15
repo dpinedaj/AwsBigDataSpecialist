@@ -1,0 +1,7 @@
+#!/bin/bash
+
+com="spark-shell --jars /usr/lib/spark/extras/lib/spark-streaming-kinesis-asl.jar,\
+amazon-kinesis-client-1.6.0.jar --driver-jave-options '-Dlog4j.configuration=\
+file:///etc/spark/conf/log4j.properties'"
+
+eval $com

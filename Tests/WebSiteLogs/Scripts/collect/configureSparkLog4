@@ -1,0 +1,6 @@
+#!/bin/bash
+
+com1="sudo sed -i 's/INFO/ERROR/g' /usr/lib/spark/conf/spark-defaults.conf"
+com2="sudo sed -i 's/INFO/ERROR/g' /usr/lib/spark/conf/log4j.properties"
+
+eval "$com1 && $com2"
