@@ -1,5 +1,3 @@
-
-
 Kinesis Producers: -> Helpers to produce data into Kinesis
     -Kinesis SDK:
         -Allows to read code or use CLI to send data into kinesis stream

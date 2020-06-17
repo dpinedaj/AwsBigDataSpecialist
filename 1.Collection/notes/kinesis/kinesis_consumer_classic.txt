@@ -1,0 +1,48 @@
+Kinesis consumers - Classic
+
+    -Kinesis SDK
+        -GetRecords:
+            -Classic Kinesis: Records are polled by consumers from a shard
+            -Each shard has 2MB total aggregate throughput
+            -Returns up to 10MB of data (then throttle for 5 seconds)
+                or up to 10000 records
+            -Maximum of 5 GetRecords API calls per shard per second = 200ms latency
+            -If 5 consumers consume from the same shard, means every consumer can poll
+                once a second and receive less than 400 kb/s
+
+    -Kinesis Client Library (KCL)
+        -Library for Java, Golang, Python, Ruby, Node, .NET...
+        -Read records from Kinesis produced with the KPL (de-aggregation)
+        -Share multiple shards with multiple consumers in one "group", shard discovery
+            A consumer can consume from multiple shards in same time
+        -Checkpointing feature to resume progress
+            -Can remember exactly where consuming last and continue progress
+            -Use DynamoDB table to checkpoint the progress overtime and 
+                synchronize to see who is going to read which shard
+
+            -Make sure to provision enough dynamoDB WCU/RCU
+                or use on-demand, otherwise may slow down KCL
+        -Record processors will process the data
+        
+    - Kinesis Connector Library
+        -Older Java Library
+        -Write to:
+            -S3
+            -DynamoDB
+            -Redshift
+            -ElasticSearch
+
+        -Kinesis Firehose replaces it for a few of these targets, Lambda for the others
+
+    -kinesis Firehose
+    
+    -AWS Lambda
+        -Can source records from Kinesis Data Streams
+        -Data consumer has a library to de-aggregate record from the KPL
+        -Can be used to run lightweight ETL to:
+            -S3, DynamoDB, Redshift, ElasticSearch, Anywhere...
+        
+    -3rd party libraries:
+        -Spark, Log4J, Appenders, Flume, Kafka Connect, NiFi...
+    
+    
