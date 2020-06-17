@@ -1,0 +1,18 @@
+Kinesis:
+    -Managed alternative to Apache Kafka for rea-time big data
+    -Great for logs, metrics, IoT, clickstreams
+    -Great for streaming processing frameworks (Spark, NiFi, etc...)
+    -Data is automatically replicated to 3AZ
+    -Types:
+        -Kinesis Streams:
+            -Low latency streaming ingest at scale
+        -Kinesis Analytics:
+            -Perform real-time analytics using SQL
+        -Kinesis Firehose:
+            -Load streams into S3, Redshift, ElasticSearch & Splunk --> for data loads
+        
+Architecture:
+    -Amazon kinesis streams receives all the data, the click streams, IoT Services, Metrics & logs
+    -Kinesis streams optionally move the data forward Amazon Kinesis Analytics 
+        to analyze and extract some real-time metrics 
+    -The data comes to Amazon Kinesis Firehose which is near-real time

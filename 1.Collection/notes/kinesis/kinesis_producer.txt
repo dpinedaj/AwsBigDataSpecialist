@@ -1,0 +1,52 @@
+
+
+Kinesis Producers: -> Helpers to produce data into Kinesis
+    -Kinesis SDK:
+        -Allows to read code or use CLI to send data into kinesis stream
+        -PutRecord(s):
+            -Uses batching and increases throughput => les HTTP requests
+
+        -ProvisionedThroughputExceeded: --> Exception
+            -Happens when sending more data (exceeding MB/s or TPS for any shard)
+            -Make sure you don't have a hot shard( too much data to just a specific shard)
+
+            Solution:
+                -Retries with backoff
+                -Increase shards (scaling)
+                -Ensure your partition key is a good one
+
+
+        -Managed AWS sources for Kinesis Data Streams:
+            -CloudWatch Logs
+            -AWS ioT
+            -Kinesis Data Analytics
+
+    -Kinesis Producer Library (KPL):
+        -Easy to use with C++ / Java library
+        -Used for building high performance, long-running producers
+        -Automated and configurable retry mechanism
+        -Synchronous or Asynchronous API (better performance for async)
+        -Support metrics into CloudWatch
+        -Support Batching
+            -Collect records and Write multiple shards in the same PutRecords API call
+            -Aggregate
+                -Can store multiple records in one record
+                -Can increase payload size and maximize 1MB/s limit
+            -Can improve batching efficiency introducing some delay with RecordMaxBufferedTime (default 100 ms)
+        -Compression must be implemented by the user
+
+    -Kinesis Agent:
+        -Linux program that run over the server
+        -Allows to log files (i.e) and load it into kinesis streams
+        -Built on top of KPL
+
+        -Features:
+            -Write from multiple directories and write to multiple streams
+            -Routing feature based on directory / log file
+            -Pre-process data before sending to streams
+            -Emit metrics to CloudWatch for monitoring
+
+    -3rd party libraries:
+        -Spark, Log4J, Appenders, Flume, Kafka Connect, NiFi...
+
+

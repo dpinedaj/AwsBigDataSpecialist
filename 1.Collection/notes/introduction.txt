@@ -1,0 +1,14 @@
+How to move data into AWS
+
+    -Real Time:
+        -Kinesis Data Streams (KDS)
+        -Simple Queue Service (SQS)
+        -Internet of Things (IoT)
+
+    -Near-real time:
+        -Kinesis Data Firehose(KDF)
+        -Database Migration Service (DMS)
+
+    -Batch -Historical Analysis
+        -Snowbal
+        -Data Pipeline

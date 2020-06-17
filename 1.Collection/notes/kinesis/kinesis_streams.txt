@@ -1,0 +1,39 @@
+Kinesis Streams:
+    -Are divided in ordered shard  --> Shard is the equivalent for the partition
+    --->Producers --> Shards ---> consumers
+    -Data retention is 24 hours by default, can go up to 7 days
+    -Ability to reprocess / replay data during the data retention period
+    -Multiple applications can consume the same Streams
+    -Real-time processing
+    -Once data is inserted in Kinesis, can't be deleted (immutability)
+
+Kinesis Stream Shards:
+    -One stream is made of many shards
+    -Billing is per shard
+    -Number of shards can evolve over time (reshard /merge)
+    -Records are orderer per shard
+    -Shards produces data as records in the form of Data Blobs
+
+Kinesis Stream Records:
+    -Data Blob:
+        -Data being sent, serialized as Bytes (Up to 1 MB) can represent anything 
+    -Record Key:
+        -Help to find shard to send data to
+        -Sent alongside a record, help to group records in Shards. Same key = Same shard.
+        -Use highly distributed key to avoid the "hot partition" problem
+
+    -Sequence number: 
+        -Unique identifier for each record put in shards. Added by kinesis after ingestion
+
+Kinesis Stream Limits:
+    -Producer:
+        -Can produce max 1 MB/s or 1000 messages/s at write PER SHARD
+    -Consumer classic:
+        -2 MB at read PER SHARD across all consumers
+        -5 API calls per second PER SHARD across all consumers
+    -Consumer Enhanced Fan-Out:
+        -2 MB at read PER SHARD, PER ENHANCED CONSUMER
+        -No API calls needed (push model)
+
+    -Data Retention:
+        -24 hours by default, up to 7 days max
