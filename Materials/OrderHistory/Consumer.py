@@ -18,7 +18,7 @@ table = dynamodb.Table('CadabraOrders')
 while 1==1:
 	out = kinesis.get_records(ShardIterator=shard_it, Limit=100)
 	for record in out['Records']:
-		print record
+		print(record)
 		data = json.loads(record['Data'])
 		invoice = data['InvoiceNo']
 		customer = int(data['Customer'])

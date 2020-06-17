@@ -16,7 +16,7 @@ placeholder = "LastLine.txt"
 
 def GetLineCount():
     with open(sourceData) as f:
-        for i, l in enumerate(f):
+        for i, _ in enumerate(f):
             pass
     return i
 
