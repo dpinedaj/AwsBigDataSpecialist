@@ -1,0 +1,6 @@
+ -FIFO Queue
+        -Name of the queue must end in .fifo
+        -Lower throughput (up to 3,000 per second with batching, 300/s without)
+        -Messages are processed in order by the consumer
+        -Messages are sent exactly once
+        -5-minute interval de-duplicatin using "Duplication ID"

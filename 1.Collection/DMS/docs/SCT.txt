@@ -1,0 +1,5 @@
+AWS Schema Conversion Tool:
+    -Convert your database's Schema from one engine to another
+    -Example OLTP: SQL Server or Oracle to MySQL, PostgreSQL, Aurora
+    -Example OLAP: Teradata or Oracle to Amazon Redshift
+    -Can be used to create AWS DMS endpoints and tasks

@@ -1,0 +1,24 @@
+-Standard Queue
+        -Scales from 1 message per second to 10.000 s per second
+        -Default retention messages: 4days, maximum 14 days
+        -No limit how many messages can be in the queue
+        -Low latency (<10 ms on publish and receive)
+        -Horizontal scaling in terms of number of consumers
+        -Can have duplicate messages (at least once delivery, occasionally)
+        -Can have out of order messages (best effort ordering)
+        -Limitation of 256 kb per message sent
+
+        -Producing Messages
+            -Define Body
+            -Optional
+                -Add message attributes
+                -Provide Delay Delivery
+
+            -Get back
+                -Message identifier
+                -MD5 hash of the body
+
+        -Consuming Messages
+            -Poll SQS for messages (receive up to 10 messages at a time)
+            -Process the message with the visibility timeout
+            -Delete the message using the message ID & receip handle

@@ -1,0 +1,15 @@
+Rules Engine:
+    -Defined on the MQTT topics
+    -When it's triggered | Action
+    -Rules use cases:
+        -Augment or filter data received from a device
+        -Write data received from a device to Dynamo DB
+        -Save file to S3
+        -Send a push notification to all users using SNS
+        -Publish data to a SQS queue
+        -Invoke a lambda function to extract data
+        -Process messages from a large number of devices using Amazon Kinesis
+        -Send data to ElasticSearch
+        -Capture CloudWatch metric
+    
+    -Rules need IAM Roles to perform their actions

@@ -1,0 +1,10 @@
+Device Gateway:
+    -Serves as the entry point fo r IoT devices connecting to AWS
+    -Allows devices to securely and efficiently communicate with AWS IoT
+    -Supports:
+        -MQTT
+        -WebSockets
+        -HTTP 1.1 protocols
+        -Scales automatically to support over a billio devices
+        -No need to manage any infrastructure
+

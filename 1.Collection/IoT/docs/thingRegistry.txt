@@ -1,0 +1,14 @@
+Thing Registry Is like IAM of IoT:
+    -All connected IoT devices are represented in the AWS IoT registry
+    -Organizes the resources associated with each device in the AWS Cloud
+    -Each device gets an unique ID
+    -Supports metadata for each device
+    -IoT Groups, group devices to apply permisses as global (like IAM)
+
+Authentication:
+    -Create X.509 certificates and load them securely ontno the Things
+    -AWS SigV4
+    -Custom tokens with Custom authorizers
+    -Cognito identities for mobile apps
+    -IAM and federated identities for web
+    

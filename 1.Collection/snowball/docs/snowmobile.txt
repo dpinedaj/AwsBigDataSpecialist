@@ -1,0 +1,4 @@
+Snowmobile
+    -Can transfer exabytes of data
+    -Each Snowmobile has 100PB of capacity
+    -Better than snowball if you transfer more than 10 PB

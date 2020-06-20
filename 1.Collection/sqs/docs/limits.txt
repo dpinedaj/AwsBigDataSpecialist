@@ -1,0 +1,8 @@
+SQS Limits:
+        -Maximum of 120,000 in-flight messages beign processed by consumers
+        -Batch Request has a maximum of 10 messages - max 256 KB
+        -Message content is XML, JSON, Unformatted text
+        -Standard queues have an unlimited TPS
+        -FIFO queues support up to 3,000 messages per second (using batching)
+        -Max message size is 256 KB (or use Extended Client)
+        -Data retention from 1 minute to 14 days

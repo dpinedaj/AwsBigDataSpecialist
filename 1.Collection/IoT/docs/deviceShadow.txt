@@ -1,0 +1,5 @@
+Device Shadow:
+    -Json Document representing the state of a connected thing
+    -We can set the state to a different desired state( ex: light on)
+    -The IoT thing will retrieve the state when online and adapt
+    

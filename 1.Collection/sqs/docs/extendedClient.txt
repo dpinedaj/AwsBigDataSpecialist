@@ -1,0 +1,7 @@
+-SQS Extended Client
+        -Is not very recommended
+        -Mesage size limit is 256 KB, how to send larger?
+        -Using the SQS extended client (Java library)
+        -Is like a trick using an S3 bucket as a companion
+        -The large messages are sent to S3 and a small message with metadata to SQS queue
+        -The consumer take the small message from SQS and also the large from S3

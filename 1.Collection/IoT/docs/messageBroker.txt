@@ -1,0 +1,10 @@
+Message Broker:
+    -Pub/sub messaging pattern - low latency
+    -Devices can communicate with one another this way
+    -Supports:
+        -MQTT
+        -WebSockets
+        -HTTP 1.1 protocol
+    -Messages are published into topics
+    -Forwards messages to all clients connected to the topic
+    

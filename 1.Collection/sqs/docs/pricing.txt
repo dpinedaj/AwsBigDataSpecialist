@@ -1,0 +1,3 @@
+Pricing:
+        -Pay per API Request
+        -Pay per network usage

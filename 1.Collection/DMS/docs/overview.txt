@@ -1,0 +1,38 @@
+DMS -> Database Migration Service
+    -Helps to replicate on-premise databases to the cloud
+    -The source database remains available during the Migration
+    -Supports:
+        -Homogeneous migrations like: Oracle to Oracle
+        -Heterogeneous migrations like: SQL Server to Aurora
+    -Must create an EC2 to perform the replication tasks
+
+Sources:
+    -On premise and ec2 instances databases:
+        -Oarcle
+        -MS SQL Server
+        -MySQL
+        -MariaDB
+        -PostgreSQL
+        -MongoDB
+        -SAP
+        -DB2
+        -Azure SQL Database
+        -Amazon RDS
+        -S3
+
+Targets:
+    -On premise and ec2 instances databases:
+        -Oarcle
+        -MS SQL Server
+        -MySQL
+        -MariaDB
+        -PostgreSQL
+        -MongoDB
+        -SAP
+        -Amazon RDS
+        -Amazon Redshift
+        -Amazon DynamoDB
+        -Amazon S3
+        -ElasticSearch
+        -Kinesis Data Streams
+        -DocumentDB

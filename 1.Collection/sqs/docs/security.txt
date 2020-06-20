@@ -1,0 +1,8 @@
+
+    SQS Security:
+        -Encryption in flight using the HTTPS endpoint
+        -Can enable SSE using KMS
+        .IAM policy must allow usage of SQS
+        -SQS queue access policy:
+            -Finer grained control over IP
+            -Control over the time the requests come in

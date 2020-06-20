@@ -1,0 +1,6 @@
+What is a queue?
+    -SQS queueq manages the messages between the producers and consumers
+    -Is the oldest offer from AWS
+    ---> The messages can't be consumed by multiple applications
+            -> That's the biggest difference with Kinesis
+

@@ -1,0 +1,33 @@
+Kinesis Data Stream:
+    -Data can be consumed many times
+    -Data is deleted after the retention period (1-7 days)
+    -Ordering of records is preserved (at the shard level)
+    -Build multiple applications reading from the same stream
+    -Streaming MapReduce querying capability
+    -Checkpointing needed to track progress of consumption
+    -Shards must be provided ahead of time ( must be specified manually)
+
+When use Kinesis Data Stream:
+    Fast log and event data collection and processing
+    -Real Time metrics and reports
+    -Mobile data capture
+    -Real Time data analytics
+    -Gaming data feed
+    -Complex Stream Processing
+    -Data Feed from Internet of Things
+
+SQS:
+    -Queue, decouple applications
+    -One application per queue
+    -Records are deleted after consumption
+    -Messages are processed independly for standard queue
+    -Ordering for FIFO queues
+    -Capability to "delay" messages
+    -Dynamic scaling of load
+
+When use SQS:
+    -Order processing
+    -Image processing
+    -Auto scaling queues according to messages
+    -Buffer and batch messages for future processing
+    -Request offloading

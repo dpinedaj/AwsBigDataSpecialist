@@ -1,0 +1,9 @@
+IoT Greengrass:
+    -Brings the compute layer to the device directyl
+    -Can execute AWS Lambda on the device:
+        -Pre-process the data
+        -Execute predictions based on ML models
+        -Keep device data in sync
+        -Communicate between local devices
+    -Operate offline
+    -Deploy functions from the cloud directly to the devices

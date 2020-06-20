@@ -1,0 +1,16 @@
+Internet of Things:
+    -The objects are "Things"
+    -The IoT Thing comunicate with the another with a Device Gateway
+    -The Device Gateway send the messages to a IoT Message Broker
+        -The Device Gateway can establish some Rules Engine to modify the messages or
+            control it
+        -Device Gateway can establish some rules actions to sent message to different targets:
+            -Kinesis
+            -SQS
+            -Lambda
+            -etc
+    -Can be also integrated with Device Shadow:
+        -Can change states from the messages and resend messages to the thing
+        -If the original thing is disconnected, the device shadow save his state after changes
+            And when the thing is "ON", the device shadow restore his state
+    

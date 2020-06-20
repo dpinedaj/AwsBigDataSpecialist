@@ -1,0 +1,8 @@
+Process:
+    1. Request snowball devices from AWS console for delivery
+    2. Install snowball client on servers
+    3. Connect the snowball to your servers and copy files using the client
+    4. Ship back the device when you're done
+    5. Data will be loaded into a S3 bucket
+    6. Snowball is completely wiped
+    7. tracking is done using SNS, text messages and the AWS console
