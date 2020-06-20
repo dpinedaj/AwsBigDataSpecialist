@@ -1,0 +1,29 @@
+Kinesos Operations
+    -Adding Shards
+        -Also called "Shard Splitting"
+        -Can be used to increase the stream capacity (1mb/s data per shard)
+        -Can be used to divide a "hot shard"
+        -The old shard is closed and will be deleted the data is expired
+            -A shard will split in two or more and the new ones will use the old place
+        
+    -Merging Shards
+        -Decrease the Stream capacity and save costs
+        -Group two shards with low traffic
+        -Old shards are closed and deleted based on data expiration
+
+    -Auto Scaling
+        -Is not a native feature in Kinesis
+        -We can implement Auto Scaling using AWS Lambda
+
+    -Limitations-
+        -Resharding cannot be done in parallel
+        -Only 1 resharding operation at a time and take a few seconds
+        -For 1000 shards it takes 30 000 seconds (8.3 hours) to double the shards to 2000
+
+        -Can't do the following:
+            -Scale more than twice for each rolling 20-hour period for each stream
+            -Scale up to more than double your current shard count for a stream
+            -Scale down below half your current shard count for a stream
+            -Scale up to more than 500 shards in a stream
+            -Scale a stream with more than 500 shards down unless the result is fewer than 500 shards
+            -Scale up to more than the shard limit for your account

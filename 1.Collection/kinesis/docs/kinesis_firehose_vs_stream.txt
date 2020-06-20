@@ -1,0 +1,13 @@
+Streams:
+    -Going to write custom code (producer /consumer)
+    -Real time (~200 ms latency for classic, ~70 ms latency for enhanced fan-out)
+    -Must manage scaling manually
+    -Data storage for 1 to 7 days, replay capability, multiple consumers
+    -Use with lambda to insert data in real-time to ElasticSearch
+
+Firehose:
+    -Full managed, send to S3, Splunk, Redshift, ElasticSearch
+    -Serverless data transformations with Lambda
+    -Near real time (lowest buffer time is 1 minute)
+    -Automated Scaling
+    -No data storage

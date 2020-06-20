@@ -1,0 +1,11 @@
+Kinesis Consumer Enhanced Fan-Out:
+
+    -New "game-changing" feature from August 2018
+    -Works with KCL 2.0 and AWS Lambda (Nov 2018)
+    -Each Consumer get 2MB/s of provisioned throughput per shard
+        -Can have multiple consumers in same shads, everyone receiven same 2 MB/s
+        -That means 20 consumers will get 40MB/s per shard aggregated
+    -SubscribeToShard():
+        -The shard will push 2 MB/s
+        -Pushes data to consumers over HTTP/2
+    -Reduce Latency (~70 ms)

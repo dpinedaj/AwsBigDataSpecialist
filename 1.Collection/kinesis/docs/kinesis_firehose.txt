@@ -1,0 +1,34 @@
+Kinesis Firehose
+    -PaaS
+    -Near Real Time (60 seconds latency minimum for non full batches)
+    -Automatic scaling
+    -Supports many data formats
+    -Support conversion from json to parquet / orc
+        -Also support data transformation through Lambda
+    -support compression when target is S3
+    -Only GZIP for Redshift
+    -Pay just for the amount of data going through Firehose
+    -Never lose data, even the failures can be saved in another bucket or place
+
+    -Can receive data from:
+        -SDK
+        -KPL
+        -Kinesis Agent
+        -Kinesis Data Streams
+        -CloudWatch
+        -IoT
+
+    -Can transform data with:
+        -Lambda functions
+
+    -Can store data to:
+        -Amazon S3
+        -Redshift
+        -ElasticSearch
+        -Splunk
+
+    Buffer Sizing
+        -Firehose accumulates records in a buffer
+        -The buffer is flushed based on time and size rules
+        -Buffer Size or Buffer time rule
+            -If the buffer is full (size or time reached), it's flushed

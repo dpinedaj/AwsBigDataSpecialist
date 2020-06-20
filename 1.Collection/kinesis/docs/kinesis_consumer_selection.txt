@@ -1,0 +1,10 @@
+Enhanced fan-out vs standard:
+    -standard:
+        -Low number of consuming applications (1,2,3)
+        -Can tolerate ~200 ms latency
+        -Minimize Cost
+    -Enhanced fan-out:
+        -Multiple Consumer applications for the same Stream
+        -Low Latency requirements ~70 ms
+        -Higher cost
+        -Default limit of 5 consumers using enhanced fan-out per data stream

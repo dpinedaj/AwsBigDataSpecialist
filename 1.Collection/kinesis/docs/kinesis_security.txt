@@ -1,0 +1,8 @@
+Kinesis Security
+    -Used for:
+        -control access using IAM policies
+        -encryption in flight using HTTPS endpoints
+        -encryption at rest using KMS
+        -client side encryption must be manually implemented
+        -VPC Enpoints to access within VPC
+        
