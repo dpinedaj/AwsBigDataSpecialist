@@ -3,3 +3,4 @@ awsCred.txt
 .bloop
 .vscode
 .scalafmt.conf
+variables.tfvars

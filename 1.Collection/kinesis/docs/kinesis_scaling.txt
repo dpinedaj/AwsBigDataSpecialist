@@ -21,7 +21,7 @@ Kinesos Operations
         -For 1000 shards it takes 30 000 seconds (8.3 hours) to double the shards to 2000
 
         -Can't do the following:
-            -Scale more than twice for each rolling 20-hour period for each stream
+            -Scale more than twice for each rolling 24-hour period for each stream
             -Scale up to more than double your current shard count for a stream
             -Scale down below half your current shard count for a stream
             -Scale up to more than 500 shards in a stream

@@ -8,7 +8,7 @@ DMS -> Database Migration Service
 
 Sources:
     -On premise and ec2 instances databases:
-        -Oarcle
+        -Oracle
         -MS SQL Server
         -MySQL
         -MariaDB
@@ -22,7 +22,7 @@ Sources:
 
 Targets:
     -On premise and ec2 instances databases:
-        -Oarcle
+        -Oracle
         -MS SQL Server
         -MySQL
         -MariaDB

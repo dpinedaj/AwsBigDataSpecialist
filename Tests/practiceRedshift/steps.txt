@@ -1,0 +1,42 @@
+1. Create Redshift cluster
+    -type dc2.large
+    -nodes= 4
+    -Specify:
+        -Cluster identifier --->testcluster
+        -Database port --->5439
+        -Master username --->admin
+        -Master user password --->Admin12345
+        -database name --->dev
+
+    -Attach IAM Role created previously with the needed permissions to S3
+
+2. Download Data to local
+
+3. Create s3 bucket
+    -Create a folder called "load"
+    -Upload the data files to this folder
+
+4. Create the sample tables
+    -Enter into the redshift editor and connect into the cluster
+        -Begin a new connection
+        -Into the query console create the tables with the sql script
+
+5. COPY data from S3 with the COPY statement:
+    -"COPY table_name [ column_list ] FROM data_source CREDENTIALS access_credentials [options]"
+
+    ---> Default format:
+        copy table from 's3://<your-bucket-name>/load/key_prefix' 
+        credentials 'aws_access_key_id=<Your-Access-Key-ID>;aws_secret_access_key=<Your-Secret-Access-Key>' 
+        options;
+
+    The copy statements are in the sql script
+
+    -For customer copy:
+        -> Modify the bucket name in customer-fw-manifest file
+        and execute the sql command to load using the manifest
+
+
+6. Vaccum and analyze data:
+    Can be done using the following statements:
+        -vacuum;
+        -analyze;
