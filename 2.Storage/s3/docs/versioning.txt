@@ -1,0 +1,9 @@
+Versioning:
+    -Can be versioned the files in AWS S3
+    -It's enabled at the bucket level
+    -Same key overwrite will increment the version: 1,2,3...
+    -It's best practice to version your buckets
+        -protect againts unintended deletes
+        -easy roll back to previous version
+    -Any file that is not versioned prior to enabling will have version "null"
+    -You can "suspend" versioning

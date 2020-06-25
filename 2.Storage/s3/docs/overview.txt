@@ -1,0 +1,25 @@
+S3:
+    -Allows people to store objects in "buckets"
+    -Bucket must have a globally unique name
+    -Buckets are defined at the region level
+
+Objects(files)
+    -Hace a key (the key is the FULL path)
+    -there's no concept of "directories" within buckets
+    -Just keys with very long names that contain "/"
+    -Object Values are the content of the body:
+        -Max size is 5 TB
+        -If uploading more than 5GB, must be "multi-part upload"
+    -Metadata as a part of objects (list of text key/ value pairs)
+    -Tags: useful for security /lifecycle
+    -Version ID: s3 allows versioning of the objects if is enabled
+
+Consistency Model:
+    -Special when used with EMR
+    -Read after write consistency for PUTS of new objects
+        -As soon an object is written, we can retrieve it
+    
+    Eventual consistency for DELETES and PUTS of existing objects
+        -If we read an object after updating, we might get the older version
+        -If we delete an object, we might still be able to retrieve it for a short time
+

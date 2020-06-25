@@ -1,0 +1,12 @@
+Cross Region Replication:
+    -Can Asynchronously replicated to another region bucket
+    -Must be enabled versioning (source and destination)
+    -Buckets must be in different regions
+    -Can be in different accounts
+    -Copying is asynchronous
+    -Must give proper IAM permisions to S3
+
+    -Use cases:
+        -compliance
+        -lower latency access
+        -repplication across accounts

@@ -1,0 +1,7 @@
+ETag (Entity Tag):
+    -File assignament
+    -Works to verify if a file has already been uploaded to S3
+    -Names can work but ETag is unique and ensure the file integrity or not changed
+    -Uses:
+        -For simple uploads (less than 5GB), it's the MD5 hash
+        -For multi-part uploads, it's more complicated, no need to know the algorithm

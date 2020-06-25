@@ -1,0 +1,28 @@
+S3 Performance:
+    -When had > 100 TPS (transaction per second), s3 performance could degrade
+    -Behind the scene, each object goes to an S3 partition and for the best performance
+     we want the highest partition distribution (as many partitions as possible)
+    -In the exam is recommended to have random characters in front of your key name
+     to optimise performance:
+        -<my_bucket>/534d_my_folder/my_file1.txt
+        -<my_bucket>/a91e_my_folder/my_file2.txt
+
+
+    -NEVER USE DATES TO PREFIX KEYS:
+        -<my_bucket>/2020_06_24_my_folder/my_file1.txt
+
+-If there's a loooot (more than 350 RPS for PUT or 5500 RPS for get for EACH PREFIX)
+    is RECOMMENDED TO RANDOMIZE PREFIX KEY NAMES
+
+-Faster upload of large objects(>5GB), use multipart upload:
+    -Parallelizes PUTs for greather throughput
+    -maximize your network bandwidth
+    -decrease time to retry in case a part fails
+
+-Use CloudFront to cache S3 objects around the world (improves reads)
+-S3 transfer acceleration  (uses edge locatoins) -- just need to change the 
+    endpoint you write to
+-If use SSE-KMS encryption, you may be limited (~100s - 1000s downloads/uploads per second)
+
+    
+    
