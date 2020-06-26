@@ -1,0 +1,31 @@
+S3 Security
+    -S3 CORS( Cross-Origin Resource Sharing)
+        -Is a requirement to request data from another website
+        -Allow to limit the number of websites that can request the s3 files
+    -Access Logs
+        -Is recommended to log all access to S3 Buckets
+        -Any request made to S3, will be logged into another s3 bucket
+        -That data can be analyzed used data analysis tools
+
+    -S3 Security
+        -User based:
+            -IAM policies -"Which API calls should be allowed for a specific user from IAM"
+        
+        -Resource Based:
+            -Bucket Policies:
+                -JSON based policies
+                    -Resources: buckets and objects
+                    -Actions: Set of API to allow or Deny
+                    -Effect: Allow/Deny
+                    -Principal: The account or user to apply the policy to
+
+            -Object Access Control List (ACL)
+            -Bucket Acces Control List (ACL)
+
+        Other:
+            -Networking:
+                -VPC Endpoints
+            -Logging and Audit
+            -User Security
+                -MFA(multi factor authentication)
+                -Signed URLS: URLS valid for a limited time

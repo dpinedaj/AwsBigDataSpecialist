@@ -1,0 +1,28 @@
+S3 Encryption:
+    -Methods:
+        -SS3-S3: Encrypts S3 objects using keys handled & managed by AWS
+            -Objects are encrypted server side
+            -AES-256 encryption type
+            -Must set header: "x-amz-server-side-encryption":"AES256"
+
+        -SSE-KMS: Leverage AWS Key management service to manage encryption keys
+            -KMS user control + audit trail
+            -encryption server side
+            -must set header: "x-amz-service-side-encryption":"aws:kms"
+
+        -SSE-C When want to manage own envryption keys
+            -Keys full managed by customer
+            -S3 does not store encryption key
+            -HTTPS must be used
+            -Encryption key must provided in HTTP headers, for every HTTP request made
+
+        -Client Side Encryption
+            -Amazon S3 Encryption Client
+            -Clients must encrypt data themselve before sending to S3
+            -Clients must decrypt data when retrieving from S3
+            -Clients manage full keys and encryption cycle
+
+    Encryption in transit (SSL)
+        -AWS S3 exposes
+            -HTTP : non encrypted
+            -HTTPS encryption in flight

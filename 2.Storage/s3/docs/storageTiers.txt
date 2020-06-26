@@ -54,3 +54,15 @@ Storage Tiers:
                 -Expediated: (1 to 5 minutes retrieval) - $0.03 per GB and $0.01 per request
                 -Standard: (3 to 5 hours) - $0.01 per GB and 0.05 per 1000 request
                 -Bulk: (5 to 12 hours) - $0.0025 per GB and $0.025 per 1000 requests
+            Vault Policies & Vault lock:
+                -vault is a collection of Archives
+                -each vault has:
+                    -ONE vault access policy
+                    -ONE vault lock policy
+                -Value Policies are written in JSON
+                -Vault Access policy very similar to bucket policy
+                -Vault Lock policy is for regulatory and compliance requirements
+                    -Is immutable, it can never be changed
+                    -Example 1: Forbid deleting an archive if less than 1 year old
+                    -Example 2: Implement WORN (Write Once Read Many)
+
