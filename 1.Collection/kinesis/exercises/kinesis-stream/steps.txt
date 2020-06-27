@@ -21,10 +21,10 @@
     - Run "wget http://media.sundog-soft.com/AWSBigData/LogGenerator.zip"
     - Run "unzip LogGenerator.zip"
     - Run "chmod a+x LogGenerator.py"
-    - Run "sudo mkdir /var/log/cadabra"
+    - Run "sudo mkdir /var/log/cadabra" ---> or the location in LogGenerator.py
     - Run "cd /etc/aws-kinesis/"
     - Run "sudo nano agent.json"
-        -copy the flows from /Materials/OrderHistory/agent.nano.txt 
+        -Copy the flows from agent.nano.txt 
             above the filePattern and deliveryStream from Firehose
     - Run "sudo service aws-kinesis-agent restart" //Or start if is the first time
     - Run "cd ~"

@@ -27,16 +27,17 @@
     - Run "wget http://media.sundog-soft.com/AWSBigData/LogGenerator.zip"
     - Run "unzip LogGenerator.zip"
     - Run "chmod a+x LogGenerator.py"
-    - Run "sudo mkdir /var/log/cadabra"
+    - Run "sudo mkdir /var/log/cadabra" ---> or the location in LogGenerator.py
     - Run "cd /etc/aws-kinesis/"
     - Run "sudo nano agent.json"
+    ///Copy data from agent.nano.txt
         -Set firehose.endpoint in blank if kinesis is in the same region, 
             else put "firehose.us-east-1.amazonaws.com" (with the region)
         -put below:
             "awsAccessKeyId" : MY_ACCESS_KEY,
             "awsSecretAccessKey": MY_ACCESS_SECRET
 
-            ////Also can attach the ec2 service to a IAM role
+            ////Also can attach the ec2 service to a IAM role with Kinesis permissions
         - Delete the first flow (It's for kinesis data streams)
         -Change "filePattern": "/var/log/cadabra/*log"
         -Change "deliveryStream": "PurchaseLogs"

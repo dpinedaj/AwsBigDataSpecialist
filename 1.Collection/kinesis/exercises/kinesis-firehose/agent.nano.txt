@@ -1,0 +1,15 @@
+{
+  "cloudwatch.emitMetrics": true,
+  "kinesis.endpoint": "",
+  "firehose.endpoint": "" #--->firehose.us-east-1.amazonaws.com #If firehose is in another region than EC2,
+
+  "awsAccessKeyId": "AKIAJF4KVZWOY65QWOOA",
+  "awsSecretAccessKey": "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", ##Also can attach IAM role to EC2 with kinesis permissions
+
+  "flows": [
+    {
+    "filePattern": "/var/log/cadabra/*log",
+    "deliveryStream":"PurchaseLogs" #--->Kinesis Firehose name
+    }
+  ]
+}
