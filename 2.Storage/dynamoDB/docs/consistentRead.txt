@@ -1,0 +1,10 @@
+Strongly Consistent Read vs Eventually Consistent Read:
+    -Eventually:
+        -> if we read just after a write, it's possible we'll get unexpected response
+            because of replication
+    -Consistent:
+        -> If we read just after a write, we will get the correct data
+
+    Default:
+        -> DynamoDB uses Eventually Consistent Reads but GetItem, Query & Scan
+            provide a "ConsistentRead" parameter you can set to True

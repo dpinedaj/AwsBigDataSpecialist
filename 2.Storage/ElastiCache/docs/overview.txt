@@ -1,0 +1,28 @@
+ElastiCache:
+    -Is to get managed Redis or Memcached
+    -Caches are in-memory databases with really high performance, low latency
+    -Helps reduce load off of databases for read intensive workloads
+    -Helps make your application stateless
+    -Write Scaling using sharding
+    -Read Scaling using Read Replicas
+    -Multi AZ with Failover Capability
+    -AWS takes care of configurations
+
+Redis:
+    -In-memory key-value store
+    -Super low latency
+    -Cache survive reboots by default
+    -Gread to host:
+        -User sessions
+        -Leaderboard (gaming)
+        -Distributed states
+        -Pub /sub messaging
+    -Multi AZ with automatic failover recovery
+
+Memcached:
+    -in-memory object store
+    -Cache doesn't survive reboots
+    -Use cases:
+        -Quick retrieval of objects from memory
+        -Cache often accessed objects
+    -Is less used than Redis.

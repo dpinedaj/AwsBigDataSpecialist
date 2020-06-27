@@ -1,0 +1,33 @@
+1. Go to service DynamoDB
+    -Create table:
+        -name: CadabraOrders
+        -PrimaryKey: CustomerID  -> Number
+        -Add sort key: OrderID   -> String
+
+        -Set default settings
+        ---> CREATE
+
+2. Login EC2 Instance (the created on section 1 with amazon linux AMI)
+    -Run "sudo pip install boto3"
+    -Run "cd ~"
+    -Run "mkdir .aws"
+    -Run "cd .aws/"
+    -Run "nano credentials"
+        -[default]
+         aws_access_key_id=<myaccesskey>
+         aws_secret_access_key=<mysecretkey>
+    -Run "nano config"
+        -[default]
+         region=us-east-1
+    -Run "cd ~"
+    -Run "wget http://media.sundog-soft.com/AWSBigData/Consumer.py"
+    -Run "nano Consumer.py"
+        -Modify StreamName
+        -Check DynamoDB Table Name
+    -Run "chmod a+x Consumer.py"
+    -Run "./Consumer.py"
+
+-Login another shell to EC2
+    -Run "cd ~"
+    -Run "sudo ./LogGenerator.py 10"
+            

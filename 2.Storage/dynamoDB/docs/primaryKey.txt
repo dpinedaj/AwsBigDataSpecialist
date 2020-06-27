@@ -1,0 +1,23 @@
+Each table must have a primary key:
+    -Option 1: Partition key only (HASH)
+        -Partition key must be unique for each item
+        -Must be diverse
+        -example: user_id for all users in a table
+    -Option 2: Partition key + Sort Key
+        -Combination must be unique
+        -Data is grouped by partition key
+        -Sort key == range key
+        -Example: users-games table
+                -user_id partition and game_id for sort key
+
+Exercise:
+    -Movie database:
+        -best partition key to maximize data distribution?
+            -movie_id
+            -producer_name
+            -leader_actor_name
+            -movie_language
+
+    ---> You must select the key which have the highest cardinality (most unique values)
+    ---> So the best choice in this case is movie_id
+    ---> a field like movie_language can have so few values, so it's not a good partition key

@@ -1,0 +1,7 @@
+-Data types supported:
+    -Scalar types:
+        -String, Number, Binary, Boolean, Null
+    -Document Types:
+        -List, Map
+    -Set Types:
+        -String Set, Number Set, Binary Set

@@ -1,0 +1,37 @@
+DynamoDB:
+    -Can be stored hundreds of TB of data with a great performance
+    -Have replication across 3 AZ
+    -NoSQL database
+    -Scales to massive workloads
+    -Can have millions of requests per seconds
+    -Low latency on retrieval
+    -Integrated with IAM for security
+    -Can perform event driven programming with DynamoDB Streams
+    -Can auto-scale
+
+Basics:
+    -Is made of tables
+        -Each table has a primary key (must be decided at creation)
+        -Each table can have an infinite number of items (= rows)
+        -Each item has attributes (can be added over time - can be null)
+        -Maximum size of a item is 400 KB
+    
+    
+Common cases:
+    -Mobile apps
+    -Gaming
+    -Digital and serving
+    -Live voting
+    -Audience interaction for live events
+    -Sensor networks
+    -Log ingestion
+    -Access control for web-based content
+    -Metadata storage for Amazon S3 objects
+    -E-commerce shopping carts
+    -Web session management
+
+Bad Uses:
+    -Prewritten application tied to a traditional relational database (use RDS instead)
+    -Joins or complex transactions
+    -Binary Large Object (BLOB) data --> Store data in s3 and metadata in DybamoDB
+    -Large data with low I/O rate: use s3 instead

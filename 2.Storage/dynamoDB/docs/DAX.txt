@@ -1,0 +1,9 @@
+DynamoDB Accelerator:
+    -Seamless cache for DynamoDB, no application rewrite
+    -Writes go through DAX to DynamoDB
+    -Micro second latency for cached reads & queries
+    -Solves the Hot Key problem
+    -5 minuts TTL for cache by default
+    -Up to 10 nodes in the cluster
+    -Multi AZ (3 nodes minimun recommended for production)
+    -hace encryption at rest with KMS, VPC, IAM...

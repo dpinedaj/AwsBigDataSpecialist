@@ -1,0 +1,15 @@
+Security:
+    -VPC
+    -IAM
+    -KMS
+    -SSL / TLS
+
+Backup and Restore
+    -Point in time restore like RDS
+
+Global Tables
+    -Multi region
+
+Database Migration Service (DMS) - can be used to migrate to DynamoDB from (Mongo, Oracle, MySQL, S3)
+
+Can launc a local DynamoDB on computer for development purposes

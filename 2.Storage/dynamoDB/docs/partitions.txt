@@ -1,0 +1,14 @@
+DynamoDB - Partitions Internal
+    -Yoy start with one partition
+    -Each partition:
+        -Max of 3000 RCU / 1000 WCU
+        -Max of 10 GB
+    -TO compute the number of partitions:
+        -By capacity:
+            -> (TOTAL RCU/3000) + (TOTAL WCU/1000)
+        -By size:
+            -> TOTAL SIZE/10 GB
+        -Total Partitions:
+            -> CEILING(MAX(Capacity, Size))
+        
+    -WCU and RCU are spread evenly between partitions

@@ -1,0 +1,20 @@
+Provisioned service:
+    -Table must have privisioned read and write capacity units
+    -Read Capacity Units (RCU): throughput for reads
+    -Write Capacity units (WCU): throughput for writes
+    -Option to setup auto-scaling of throughput to meet demand
+    -throughput can be exceeded temporarily using "burst credit"
+    -If burst credit are empty, you'll get a "ProvisionedThroughputException".
+    -It's then advised to do an exponential back-off retry
+    
+
+Throttling:
+    -If we exceed our RCU or WCU, we get "ProvisionedThroughputExceptions"
+    -Reasons:
+        -Hot keys / partitions: one partition key is beign read too many times
+         (popular item for example)
+        -Very large items: RCU and WCU depends on size of items
+    -Solutions:
+        -Exponential back-off when exception is encountered
+        -Distribute partition keys as much as possible
+        -If RCU issue, we can use DybamoDB Accelerator (DAX)

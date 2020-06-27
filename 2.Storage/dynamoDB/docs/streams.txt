@@ -1,0 +1,12 @@
+Streams:
+    -Near-Real time
+    -Changes in DynamoDB can end up in a Stream
+    -Stream can be read by AWS Lambda
+        -Can trigger some action
+    -Cross Region Replication
+    -Stream has 24 hours of data retention
+    -Batch size (up to 1000 rows, 6MB)
+
+    Kinesis Adapter
+        -Use KCL to directly consume from DynamoDB Stream
+        -The interface and programming is exactly the same as Kinesis Streams

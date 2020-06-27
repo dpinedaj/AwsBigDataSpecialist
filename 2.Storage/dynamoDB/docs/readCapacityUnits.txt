@@ -1,0 +1,11 @@
+Read Capacity Units:
+    -1 RCU represents one strongly consistent read per second, or two eventually consistent reads
+        per second, for an item up to 4 KB in size.
+    -If the items are larger tan 4 KB, more RCU are consumed
+
+    -Example 1: 10 strongly consistent reads per second of 4KB each
+        -> 10 * 4 / 4 = 10 RCU
+    -Example 2: 16 eventually consistent reads per seconds of 12 KB each
+        -> 16/2  * 12/4  = 24 RCU
+    -Example 3: 10 strongly consistent reads per seconds of 6 KB each
+        -> 10 * 8/4  = 20 RCU ( we have to round up 6KB to 8KB)

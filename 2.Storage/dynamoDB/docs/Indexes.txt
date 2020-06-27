@@ -1,0 +1,15 @@
+Local Secondary index:
+    -Alternate range key for a table -> local to the hash key
+    -Up to five local secondary indexes per table
+    -Sort key sonsist of exactly one scalar attribute
+    -Must be defined at table creation time
+
+Global Secondary Index:
+    -To speed up queries on non-key attributes
+    -The index is a new "table" and we can project attributes on it
+        -partition and sort key of original are always projected (KEYS_ONLY)
+        -can specify extra ttributes (INCLUDE)
+        -can use all attributes (ALL)
+
+    -Must define RCU / WCU for the index
+    -Possibility to add / modify GSI
