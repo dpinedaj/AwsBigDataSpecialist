@@ -1,6 +1,6 @@
 S3 Encryption:
     -Methods:
-        -SS3-S3: Encrypts S3 objects using keys handled & managed by AWS
+        -SSE-S3: Encrypts S3 objects using keys handled & managed by AWS
             -Objects are encrypted server side
             -AES-256 encryption type
             -Must set header: "x-amz-server-side-encryption":"AES256"
