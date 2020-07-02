@@ -1,0 +1,38 @@
+Lambda will replace the "Consumer" script on requirement1 in Order History app
+-Lambda will analyze data after kinesis and before insert it into dynamoDB
+
+1- Enter in IAM
+    -Rules
+    -Create a rule
+    -select AWS service --> Lambda
+    -Select AmazonKinesisReadOnlyAccess, AmazonDynamoDBFullAccess policies
+    -Role name "CadabraOrders" or anyone you want
+    -click create rule to commit
+
+2 - Create Lambda Function
+        -Author from scratch
+            -Name: "ProcessOrders" or anyone you want
+            -runtime Python 2.7
+            -Role --> existing role ---> "CadabraOrders"
+        -click create function to commit
+
+3 - Configure Lambda Function
+        -Add trigger
+            -kinesis
+            -Select kinesis stream "CadabraOrders" made in the previous excercise
+            -Consumer ---> No consumer
+            -Batch size ---> 100
+            -Starting position ---> Latest
+            -Enable trigger --> On
+            -clic add to commit
+        -Scroll up and click on "ProcessOrders" to go into the lambda function then scroll down again to see the code
+            -clear the editor content
+            -copy the content of "lambda-function.txt" into the editor and
+            -save
+
+4 - Log into EC2 instance
+        -Run "LogGenerator.py" from kinesis exercise
+    
+5 - Check DynamoDB table content
+
+6 - Check lambda function monitoring to check the metrics

@@ -1,0 +1,27 @@
+What is?:
+    -A way to run code snippets "in the cloud"
+    -Used to process data as it's moved around
+    -Don't have to worry about a server to run into
+    -Automatically scale up the hardware to run the data is coming in
+
+
+Why not just run a server?:
+    -Server management (patches, monitoring, hardware failures)
+    -Servers can be cheap, but scaling gets expensive really fast
+    -You don't pay for processing time, you don't use
+    -Easier to split up development between front-end and back-end
+
+Main uses:
+    -Real-time file processing
+    -Real-time stream processing
+    -ETL
+    -Cron replacement
+    -Process AWS events --> any service that can generate triggers to lambda
+
+Extra:
+    -High availability
+    -unlimited scalability
+    -High performance
+        -But you do specify a timeout
+        -This can cause problems, max is 900 seconds
+

@@ -1,0 +1,24 @@
+Integration with elastic search:
+    -Can process data during the travel
+    ->object creation can trigger a lambda function and take it to Amazon elastic search
+    ->Elastic search will take the metrics, can analyze clickstreams, real-time data, start the service itself
+
+Integration with Data Pipeline:
+    ->Can also be triggered from s3, and lambda will trigger an AWS Data Pipeline that
+        will process the data further
+    ->Can "fix" the scheduler process of a data pipeline
+
+Integration with Redshift 
+    -> Lambda allows to upload data into redshift database
+    -> A problem is that lambda can't have any state information so can't pass any information from
+        a lambda to another, so is useful to save the batching data into a service like DynamoDB
+        and recover his state in the next lambda run
+    -> Lambda can run a copy command from redshift
+
+Integration with Kinesis:
+    ->Lambda receives an event with a batch of stream records
+        -The trigger can be setted up will the batch size (up to 10,000 records)
+        -Must be define correctly the timeout depending of batch size, default (900 seconds)
+
+        ->Lambda will retry the same batch until it succeeds or data expires
+

@@ -1,0 +1,16 @@
+Triggers:
+    -S3
+    -SES
+    -Kinesis
+    -DynamoDB
+    -SNS
+    -SQS
+    -Config
+    -IoT
+    -Lex
+    -CloudWatch
+    -CloudFormation
+    -API Gateway
+    -CloudFront
+    -Cognito
+    -CodeCommit

@@ -1,0 +1,4 @@
+Anti-patterns:
+    -Long-running applications
+    -Dynamic websites
+    -Stateful applications

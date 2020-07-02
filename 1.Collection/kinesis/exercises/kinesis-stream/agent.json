@@ -24,10 +24,6 @@
           ]
         }
       ]
-    },
-    {
-      "filePattern": "/var/log/cadabra/*log",
-      "deliveryStream":"PurchaseLogs" 
-    }
+    }    
   ]
 }

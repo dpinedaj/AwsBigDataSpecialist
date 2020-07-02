@@ -1,0 +1,4 @@
+Costs:
+    -Free tier of 1M requests / month, 400K GB-seconds compute time
+    -$0.20 / million request
+    -$0.00001667 per GB/second
