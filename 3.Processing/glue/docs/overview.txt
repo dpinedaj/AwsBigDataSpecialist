@@ -1,0 +1,16 @@
+AWS Glue:
+    -Table definitions and ETL
+
+What is Glue?:
+    -Serveless discovery and definition of table definitions and schema
+        -S3 "data lakes"
+        -RDS
+        -RDS
+        -Redshift
+
+        --> is able to discover schema from table definitions and publish those to 
+            an analysis service
+
+    -Custom ETL jobs
+        -Trigger-driven, on a scheduler or on demand
+        -Can perform a process to s3 data when it arrives

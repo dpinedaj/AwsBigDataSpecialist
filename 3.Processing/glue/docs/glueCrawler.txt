@@ -1,0 +1,4 @@
+GLue Crawler:
+    -it scan the data on s3, infer schema automatically and allows
+        to pass the data to another services
+    -Save that schema data in the Data Catalog

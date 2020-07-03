@@ -1,0 +1,5 @@
+Glue plus Hive:
+    -Using Glue Data Catalog and hive metastore into glue
+    -Glue Data Catalog can provide data information to hive
+
+

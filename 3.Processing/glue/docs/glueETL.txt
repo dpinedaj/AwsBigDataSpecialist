@@ -1,0 +1,54 @@
+Glue ETL:
+    -Automatic code generation
+    -Scala or Python
+    -Encryption:
+        -Server-side (at rest)
+        -SSL (in transit)
+        -Can provision additional "DPUs" (data processing units) to increase
+         performance of underlying Spark Jobs
+
+
+General:
+    -An Glue ETL can transform data, clean data, Enrich data (before analysis)
+        -Generate ETL code in Python or Scala which is modificable
+        -Can be provided own Spark or PySpark scripts from scratch
+        -Target can be S3, JDBC (RDS, Redshift) or Glue Data Catalog
+    -Job are run on a serveless Spark platform
+
+    -Glue Scheduler to schedule the Jobs
+    -Glue Triggers to automate job runs based on "events"
+
+Transformations:
+    -Bundled:
+        -DropFields, DropNullFields -> remove (null) fields
+        -filter -> specify a function to filter recors
+        -Join -> to enrich data
+        -Map  -> add fields, delete fields, perform external lookups
+    
+    -Machine Learning:
+        -FindMatches ML: Identify duplicate or matching records in your dataset,
+        even when the records do not have a common unique identifier and no fields match exactly
+        -Format conversions: CSV, JSON, Avro, Parquet, ORC, XML
+        -Apache Spark transformations (example: K-Means)
+
+Endpoints:
+    -ETL scripts using a notebook
+        -Then create an ETL job that runs your script (using spark and glue)
+    -Endpoint is in a VPC controlled by security groups, connect via:
+        -Apache Zeppelin on a local machine
+        -Zeppelin notebook server on EC2
+        -SageMaker notebook
+        -PyCharm professional edition
+
+Glue Jobs:
+    -Time-based schedules (cron style)
+    -Job bookmarks
+        -Persist state from the job run
+        -prevents reprocessing of old data
+        -Allows to process new data only when re-running on a schedule
+        -Works with S3 sources in a variety of formats
+        -Works with relational databses via JDBC
+        
+    -CloudWatch events
+        -Fire off a lambda function or SNS notification when ETL succeds or fails
+        -Invoke EC2 run, send event to Kinesis, activate a Step Functior

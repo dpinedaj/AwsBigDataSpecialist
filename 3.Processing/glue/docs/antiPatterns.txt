@@ -1,0 +1,4 @@
+Glue Anti-patterns:
+    -Streaming data (Glue is batch oriented, minimum 5 minute intervals)
+    -Multiple ETL engines
+    -NoSQL databases

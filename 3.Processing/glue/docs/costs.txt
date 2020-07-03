@@ -1,0 +1,5 @@
+Costs:
+    -Billed by the minute for crawler and ETL jobs
+    -First million objects stored and accesses are free for the Glue Data Catalog
+    -Development endpoints for developing ETL code charged by the minute
+    
