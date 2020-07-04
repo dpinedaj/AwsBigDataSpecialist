@@ -1,7 +1,4 @@
-1- Create S3 Bucket
-    -Select a name for Order Logs
-
-2- Create Kinesis Data Stream
+1- Create Kinesis Data Stream
     -Name: CadabraOrders (Or anyone)
     -Number of shards: 1
     -Stream capacity:
@@ -9,14 +6,14 @@
         -1000 records per seconds
         -Read 2 MB per second
 
-3 - Create new key pair for ec2 instance
+2 - Create new key pair for ec2 instance
 
-4 - Create Ec2 Instance
+3 - Create Ec2 Instance
     -Amazon Linux AMI
     -t2-micro
     -Select created key pair
 
-5 - Login into Ec2 Instance
+4 - Login into Ec2 Instance
     - Run "sudo yum install -y aws-kinesis-agent"
     - Run "wget http://media.sundog-soft.com/AWSBigData/LogGenerator.zip"
     - Run "unzip LogGenerator.zip"

@@ -16,7 +16,7 @@ General:
     -Job are run on a serveless Spark platform
 
     -Glue Scheduler to schedule the Jobs
-    -Glue Triggers to automate job runs based on "events"
+    -Glue Triggers to automate job runs based on "events" --->???
 
 Transformations:
     -Bundled:
