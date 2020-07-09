@@ -1,0 +1,12 @@
+How it Works:
+    -Driver program:
+        -Contain Spark Context where runs the main spark program
+            Spark Context connect all the cluster managers taking care of the resource that will need the
+            applications
+
+    -In EMR is using a Cluster Manager
+        -Uses Apache YARN to manage cluster resources and interactions
+    
+    -Executors:
+        -Process and run computations and store the data for applications
+        -Spark context sends what applications to run

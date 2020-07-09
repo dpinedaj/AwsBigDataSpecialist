@@ -1,0 +1,17 @@
+Hive:
+    -Basically structured Data living on hadoop YARN
+    -Is on top of MapReduce that allows to do distributed process on 
+        SQL in underlying data
+    -Also can use Tez inplace of MapReduce:
+
+        '
+        -Tez is a framework that generalizes the MapReduce paradigm by
+            treating computations as DAGs
+        -MapReduce tasks are combined into a single job that is treated as a node
+            in the DAG, enforcing concurrency and serialization.
+        -The edges of the DAG represents the movement of data between jobs
+        -Is data type-agnostic, which means that i'ts concerned only with the movement
+            of the data and not the format it takes
+        '
+
+    

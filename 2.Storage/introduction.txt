@@ -1,0 +1,4 @@
+How to storage the data
+    -S3 for raw data as a data lake or for datawarehousing using another tools over it
+    -dynmoDB as noSQL tables to retrieve data
+    -ElasticCache for memory-storage used for pub-sub services or anyother

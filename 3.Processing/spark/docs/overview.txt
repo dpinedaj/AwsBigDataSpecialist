@@ -1,0 +1,13 @@
+Apache Spark:
+    -Very popular framework used to process massive datasets
+    -Process data in memory instead of disk
+    -Have graphs that optimize query executions
+    -Provides APIS in scala, python, java and R
+    -Have a lot of libraries built-in (for processing, machine learning)
+    -Can have stream processing with spark-streaming and interact with Kafka and kinesis
+    -Streaming Analytics results in HDFS like S3
+    -MLlib for machine learning models
+    -Have a SQL interface with SparkSQL to perform SQL queries like HiveQL
+
+
+

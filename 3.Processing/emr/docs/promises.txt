@@ -1,0 +1,6 @@
+EMR promises:
+    -charges by the hour
+        -plus EC2 charges
+    -Provisions new nodes if a core node fail
+    -Can add and remove tasks nodes on the fly
+    -Can resize a running cluster's core nodes

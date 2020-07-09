@@ -1,0 +1,25 @@
+Spark Components:
+    -Spark Core:
+        -Access the foundation to the plataform, resource management, storing systems
+        -Have the basic spark-abstraction (RDD)
+    -Spark SQL:
+        -Distribuited querying up to 100 times faster than MapReduce
+        -Have cost space optimizer, columnar stores and code generation for fast queries
+        -Can be connected with JDBC, Hive, json or parquets
+        -Can store data in hive tables like HiveQL
+        -Have Catalyst Optimizer
+        -Dataframe abstraction
+    -Spark Streaming:
+        -Ingest data in mini batches that enables analytics on that data with the same code used for
+            batch applications
+        -Improve developer productivity because the same code can be used in batch and in streaming
+        -Can be integrated with kafka, flum, hdfs, hiveQL, kinesis
+        -Is defined a Data Stream or "Discretized Stream" that is composed of many rdds
+        -
+    -MLLib:
+        -Machine learning algorithms on data on large scale
+        -Can have classification, regressiong, clustering, filttering and pattern mining
+    -GraphX:
+        -graphs in the data structure sense
+        -Relationships between users in a network
+        -Provides ETL capabilities, exploratory analysis and a lot of algorithms

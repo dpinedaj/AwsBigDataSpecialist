@@ -1,0 +1,8 @@
+The used services are:
+    -EC2
+    -VPC to configure virtual network shared by the instances
+    -S3 to store input and oputput data
+    -CloudWatch to monitor cluster performance
+    -AWS IAM to configure permissions
+    -CloudTrail to audit requests made to the service
+    -Data Pipeline to schedule and start your clusters

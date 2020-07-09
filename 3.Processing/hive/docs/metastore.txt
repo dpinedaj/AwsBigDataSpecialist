@@ -1,0 +1,23 @@
+Hive Metastore:
+    -Hive mantains a "metastore" that imparts a defined structure
+        on the unstructured data that is stored on HDFS
+
+        --CREATE TABLE ratings(
+            userID INT,
+            movieID INT,
+            rating INT,
+            time INT)
+        ROW FORMAT DELIMITED
+        FIELDS TERMINATED BY '\t'
+        STORED AS TEXTFILE;
+
+        LOAD DATA LOCAL INPATH '${env:HOME}/ml-100k/u.data'
+        OVERWRITE INTO TABLE ratings;--
+
+External Hive Metastores:
+    -Metastore is stored in MySQL on the master node by default
+    -External metastore offer better resiliency /integation
+        -AWS Glue Data Catalog
+        -Amazon RDS
+
+    

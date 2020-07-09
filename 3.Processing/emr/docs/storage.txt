@@ -1,0 +1,7 @@
+Storage:
+    -HDFS
+    -EMRFS: access S3 as if it where HDFS
+        -EMRFS Consistent View - Optional for S3 consistency
+        -Uses DynamoDB to track consistency
+    -Local file system
+    -EBS: "Elastic block storate (Optimized storage system for EC2)" for HDFS

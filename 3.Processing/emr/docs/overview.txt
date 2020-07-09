@@ -1,0 +1,20 @@
+Elastic MapReduce
+    -Managed Hadoop framework on EC2 instances
+    -Includes Spark, HBase, Presto, Flink, Hive & more
+    -EMR Notebooks--->using python in a browser
+    -Integration points with AWS
+
+Architecture:
+    -Every cluster have just a Master Node
+        -Single EC2 Instance
+    -Core node execute tast and store data
+        -Host HDFS data and runs tasks
+        -Can be scaled up & down, but with some risk
+    -Task node: Run tasks, does not host data:
+        -No risk of data loss when removing
+        -Good use of spot instances
+    
+Usage:
+    -Transient (many times up-down clusters) vs Long-Running Clusters
+        -can spit up task nodes using spot instances for temporary capacity
+        -can use reserved instances on long-running clusters to save $

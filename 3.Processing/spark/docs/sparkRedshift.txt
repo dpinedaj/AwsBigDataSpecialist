@@ -1,0 +1,6 @@
+Spark integration with Redshift:
+    -Redshift can be a Spark SQL data source
+    -Useful for ETL using Spark into an EMR cluster
+    -Can retrieve data from S3 bucket and with Redshift can be provided an SQL interface to 
+        query with Spark SQL
+    -Using redshift can be paralellized the processing of querying data into S3

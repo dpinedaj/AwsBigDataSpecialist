@@ -1,0 +1,5 @@
+AWS integration points:
+    -Load table partitions from S3
+    -Write tables in S3
+    -Load scripts from S3
+    -DynamoDB as an external table

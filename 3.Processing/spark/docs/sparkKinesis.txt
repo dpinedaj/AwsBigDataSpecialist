@@ -1,0 +1,3 @@
+Spark Streaming integration with Kinesis:
+    -Using a library for spark streaming built in top of kinesis client
+        that allow spark streaming import data into amazon kinesis data streams

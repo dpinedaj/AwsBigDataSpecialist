@@ -1,0 +1,14 @@
+Why use Hive:
+    -Uses familiar SQL syntax (HiveQL)
+    -Interactive
+    -Scalable -works with "big data" on a cluster
+        -Is the most appropiate for data warehouse applications and OLAP applications
+    -Easy OLAP queries - WAY easier than writing MapReduce in Java
+    -Highly optimized
+    -Highly extensible
+        -user defined functions
+        -Thrift server ---> Interface-definition used to improve scalability on
+                       ---> web-apps development
+                       ---> Allows code generation via shell instructions of a 
+                       ---> web-app functionality
+        -JDBC / ODBC driver

@@ -1,0 +1,6 @@
+How to generate the transform phase on ETL process:
+    -Multiple resources for multiple scenarios like:
+        -Real-time processing
+        -Batch processing
+        -Parallelized proccesing
+        -Cloud-hosted notebooks to work directly on cloud clusters
