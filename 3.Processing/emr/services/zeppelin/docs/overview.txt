@@ -1,0 +1,10 @@
+Apache Zeppelin:
+    -Allows interactively run scripts /code agains your data
+    -Can interleave with nicely formatted notes
+    -Can share notebooks with others on your cluster
+    -Integrations
+        -Spark
+        -Python
+        -JDBC
+        -HBase
+        -ElasticSearch

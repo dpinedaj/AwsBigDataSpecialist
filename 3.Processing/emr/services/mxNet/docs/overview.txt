@@ -1,0 +1,6 @@
+MXNet:
+    -Alternative to tensorflow, library for building and acceleration
+        neural networks
+    -Included on EMR
+    -To perform deep learning into EMR
+    

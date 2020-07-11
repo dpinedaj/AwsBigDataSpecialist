@@ -1,0 +1,4 @@
+AWS integration:
+    -Ability to use multiple file system (not just HDFS)
+        -i.e. query data in S3
+    -Load JAR's and scripts from S3

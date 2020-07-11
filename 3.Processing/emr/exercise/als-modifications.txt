@@ -1,0 +1,8 @@
+    lines = spark.read.text("s3://<bucket-name>/<path-to-data-content>").rdd  #-->Example to data content: /2019/02/11/16/*
+    parts = lines.map(lambda row: row.value.split(',')) #Check the separator, in this case is ","
+    #Filter out postage, shipping, bank charges, discounts, commissions
+    productsOnly = parts.filter(lambda p: p[1][0:5].isdigit())
+    #Filter out empty customer ID's
+    cleanData = productsOnly.filter(lambda p: p[6].isdigit())
+    ratingsRDD = cleanData.map(lambda p: Row(customerId=int(p[6]), \
+        itemId=int(p[1][0:5]), rating=1.0))

@@ -1,0 +1,11 @@
+Apache Flume:
+    -Streaming data into the cluster
+    -Distributed reliable and available service to efficiently 
+    collect, aggregate, move, allows to log income for a particular service
+    -Events are stored in multiple channels in a flume source
+    -Each channel stores the event who is consumed by a "flume sink"
+    -Each sink remove the data from the channel and put it into an external repository
+        like hbase or emr cluster
+    -Can be loaded through hive integration as json data
+    -objective:
+        -Streaming log data into a cluster

@@ -1,0 +1,12 @@
+What is HBase:
+    -The project's goal is the hosting of very large tables 
+        (billions of rows X millions of columns)
+    -Non-relational and column oriented database
+    -Allows Google's BigTable operations like memory compression
+        bloom filter (probabilistic statistical filtering) on columns base
+    -Allows Hive integration
+    -Operate the queries in-memory
+
+When to Use:
+    -Use it when you need random, realtime read/write access to Big Data
+    -Use when the most of tools implemented are in hadoop ecosystem

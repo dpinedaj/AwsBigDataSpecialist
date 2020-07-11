@@ -1,0 +1,57 @@
+S3DistCP
+    -Tool for copying large amounts of data
+        -From S3 into HDFS
+        -From HDFS into S3
+    -Uses MapReduce to copy in a distributed manner
+    -Suitable for parallel copying of large numbers of objects
+        -Across buckets, across accounts
+
+Ganglia:
+    -Monitoring with data storage and visualization tool
+    -Helps to link multiple clusters and can monitore them
+    -Is configured to ingest and visualize Hadoop and Spark metrics
+    -Opened in a browser shows the cluster's performance with graphs detailing the load, memory usage, CPU utilization, network traffic
+
+Mahout:
+    -Machine Learning library
+
+Accumulo:
+    -Another NoSQL database based in bigTable from google, his main principle is the 
+        security, each key/value pair has its own security label which limits query results based on 
+        user authorizations
+    
+Sqoop:
+    -Relational database connector
+    -Efficiently transfer data between structured, semi-structured and unstructured data sources
+        to HDFS with the option of compress it in different binary formats and create a hive table on the way
+    -An sqoop import example:
+        -   sqoop import 
+            --connect jdbc:mysql://<host>:<port>/<sid> 
+            --query 'SELECT * from <table_name>' 
+            --username <user> -password <pwd> --incremental append 
+            --last-value <lastValue> -check-column <lastValueCol> 
+            --target-dir hdfs://<hdfs_path>
+
+HCatalog:
+    -Table and storage management for Hive metastore
+    -Allows different data tool sources to write and manage data from hive
+
+Kinesis Connector:
+    -Directly access kinesis stream in your scripts
+    -Is a library that allows to access data easily from code to kinesis data streams
+
+Tachyon:
+    -Accelerator for Spark
+    -Written in java and supports many frameworks such spark, hadoop and Shark, it store data into memory and allows to share it into different clusters
+        getting a better performance of sharing data
+    -Is the default "off-heap" option in Spark, which means that RDDs can automatically be stored inside Tachyon to make spark more resilient
+        and avoid GC overheads
+
+Derby:
+    -Open source relational DB in Java
+    -Database Engine which is used as a lightweight db into java applications
+
+Ranger:
+    -Data security manager for Hadoop
+    -Centralized security administration to manage all security related tasks in a central UI or using REST APIs
+    -Centralize auditing of user access and administrative actions (security related) within all the components of Hadoop

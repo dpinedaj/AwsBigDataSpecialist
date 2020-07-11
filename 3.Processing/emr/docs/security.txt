@@ -1,0 +1,9 @@
+EMR Security:
+    -IAM policies
+    -Kerberos:
+        -Provide a strong autentication through secret key in an encripted format
+    -SSH:
+        -Secure way to connect to a CLI from the EC2 master
+    -IAM roles:
+        -Attaching the roles to the services can provide specific permissions to each user
+    -As most of the services the security can be on transit with and on rest

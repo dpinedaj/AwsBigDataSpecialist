@@ -1,0 +1,5 @@
+HBase advantages:
+    -Efficient storage of sparse data
+    -Appropiate for high frequency counters (consistent reads & writes)
+    -High write & update throughput
+    -More integration with Hadoop

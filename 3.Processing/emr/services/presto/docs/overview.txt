@@ -1,0 +1,22 @@
+Presto:
+    -Preinstaled in EMR
+    -Is an open source distributed SQL query engine for running 
+    interactive analytic queries
+    -It can connect to manny different "big data" databases and data stores at once and
+        query across them
+    -Interactive queries at petabyte scale
+    -Familiar SQL syntax
+    -Optimized for OLAP - analytical queries, data warehousing
+    -Developed, and still partially maintained by Facebook
+    -This is what Amazon Athena uses under the hood
+    -Exposes JDBC, Comand-Line and Tableau Interfaces
+
+Presto Connectors:
+    -HDFS
+    -S3
+    -Cassandra
+    -MongoDB
+    -HBase
+    -SQL
+    -Redshift
+    -Teradata

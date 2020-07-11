@@ -1,0 +1,7 @@
+Spark:
+    -Can run spark code interactively (like spark shell)
+        -This speeds up development cycle
+    -Can execute SQL queries directly against SparkSQL
+    -Query results may be visualized in charts and graphs
+    -Spark feels more like a data science tool
+    

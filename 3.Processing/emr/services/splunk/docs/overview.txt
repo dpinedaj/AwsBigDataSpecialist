@@ -1,0 +1,5 @@
+Splunk:
+    -Operations inside the whole cluster
+    -Makes machine data accessible, usable and valuable for everyone
+    -Can be used to visualize EMR and S3 data using an EMR Hadoop cluster
+    

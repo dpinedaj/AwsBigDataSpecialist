@@ -1,0 +1,7 @@
+EMR Notebook:
+    -Similar to zeppelin with more AWS integration
+    -Notebooks backed up to S3
+    -Provision clusters from the notebook
+    -Hosted inside a VPC
+    -Accessed only via AWS console
+    -Can be attached to an existing cluster o provision an extra cluster from notebook

@@ -1,0 +1,6 @@
+HUE:
+    -Hadoop User Experience
+    -Graphical front-end for applpications on your EMR cluster
+    -Interface to manage entire cluster, spin up services, getting operations on a process
+    -IAM integration: Hue Super-users inherit IAM roles
+    -S3: Can browse & move data between HDFS and S3

@@ -1,0 +1,10 @@
+What is Apache Pig:
+    -Pig is a high-level platform for creating programs that run on Hadoop
+    -The language is "Pig Latin", a scripting language that lets you use SQL-Like
+        syntax to define map and reduce steps and can execute jobs in MapReduce,
+        Tez, Spark.
+    -Uses Lazy evaluation
+    -Uses ETL flows
+    -Declares execution plans
+    -Supports pipeline splits, thus allows workflows to work with DAGs
+  
