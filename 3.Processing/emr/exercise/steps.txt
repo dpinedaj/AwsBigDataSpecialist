@@ -76,4 +76,3 @@ Steps:
             -> cd /var/log/cadabra
             -> grep 21899 *.log
             ----->There can check the item logs
-                
