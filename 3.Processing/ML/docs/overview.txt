@@ -1,0 +1,6 @@
+Amazon Machine Learning:
+    -Provides visualization tools
+    -Can train data from S3, Redshift or RDS
+    -Build a model than can make predictions using batches or a low-latency API
+    -Can do train/test and evaluate model
+    -Fully managed

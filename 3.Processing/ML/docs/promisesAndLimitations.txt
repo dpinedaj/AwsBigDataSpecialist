@@ -1,0 +1,4 @@
+Promises & Limitations:
+    -No Downtime
+    -Up to 100GB training data
+    -Up to 5 simultaneous jobs

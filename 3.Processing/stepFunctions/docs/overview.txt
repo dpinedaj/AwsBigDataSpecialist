@@ -1,0 +1,16 @@
+AWS Step Functions
+    -Used to design workflows
+    -Can build a system that preprocess and connect steps together
+    -Easy visualizations
+    -Advanced Error handling and retry mechanism outside the code
+    -Audit of the history of workflows
+    -Ability to "Wait" for an arbitrary amount of time
+    -Max execution time of a State Machine is 1 year
+    -The syntax is a based-json language
+
+
+Example:
+    -Generate dataset
+    -Train model
+    -Save model
+    -Apply that model

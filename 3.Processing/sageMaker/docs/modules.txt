@@ -1,0 +1,7 @@
+SageMaker modules:
+    -Build:
+        -Preload models
+    -Train:
+        -Fit or train model to custom data
+    -Deploy:
+        -Allows to push the current models to anywhere on internet to be usable.

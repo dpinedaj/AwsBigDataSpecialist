@@ -1,0 +1,7 @@
+Anti-Patterns:
+    -Terabyte-scale data
+    -Unsupported learning tasks:
+        -Sequence predictions
+        -Unsupervised clustering
+        -Deep Learning
+    -EMR /Spark is an (unmanaged) alternativs

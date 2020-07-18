@@ -1,0 +1,5 @@
+-Tensorflow
+-Apache MXNet
+-GPU accelerated deep learning
+-Scaling effectively unlimited
+-Hyperparameter tuning jobs

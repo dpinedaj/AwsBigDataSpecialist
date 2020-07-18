@@ -1,0 +1,16 @@
+AWS Data Pipeline
+    -Defines the data flow
+        -i.e extract data using EC2 to s3, and then process it with EMR
+    -Is like a task scheduling framework
+    -Can automate data moves from sources to data storage including some processing if want
+
+
+Features:
+    -Destinations:
+        -S3, RDS, DynamoDB, Redshift and EMR
+    -Manages task dependencies
+    -Retries and notifies on failures
+    -Cross-region pipelines
+    -Precondition checks
+    -Data sources may be on-premises
+    -Highly available

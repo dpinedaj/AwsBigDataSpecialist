@@ -1,0 +1,8 @@
+Ideal Usage Patterns:
+    -Flag suspicious transactions (fraud detection)
+    -Forecasting product demand
+    -Personalization - predict items a user will be interested in
+    -Predict user activity
+    -Classify social media (does this Tweet require my attention?)
+
+    

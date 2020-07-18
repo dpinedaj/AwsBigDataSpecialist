@@ -1,0 +1,7 @@
+SageMaker:
+    -Allows to create notebooks on AWS
+    -Can make predictions over cloud processing
+    -Scalable ML service, has more flexibility and more algorithms that ML Service
+        And more easy to use
+    -Can use python code in a jupyter notebook
+    
