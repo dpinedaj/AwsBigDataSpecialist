@@ -1,0 +1,16 @@
+{
+  "cloudwatch.emitMetrics": true,
+  "kinesis.endpoint": "",
+  "firehose.endpoint": ""
+
+  "awsAccessKeyId": "",
+  "awsSecretAccessKey": "",
+
+  "flows": [
+    {
+    "filePattern": "/var/log/httpd/ssl_access*",
+    "deliveryStream":"WebLogs",
+    "initialPosition": "START_OF_FILE"
+    }
+  ]
+}

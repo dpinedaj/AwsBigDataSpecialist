@@ -1,0 +1,7 @@
+Cost Model:
+    -Pay only for resources consumed (but it's not cheap)
+    -Serverless; scales automatically
+    -Use IAM permissions to access streaming source and destination(s)
+    
+
+    

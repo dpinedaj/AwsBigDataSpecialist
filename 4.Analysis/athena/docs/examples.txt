@@ -1,0 +1,8 @@
+Examples:
+    -Querying ad-hoc queries of web logs pattern to do queries on S3
+    -Querying staging data before loading to Redshift, take a preview of data before loading it
+    -Analyze CloudTrail / CloudFront / VPC /ELB etc logs in S3
+    -Integartion with Jupyter, Zeppelin, RStudio notebooks
+    -Integration with QuickSight
+    -Integration via ODBC / JDBC with other visualization tools
+    

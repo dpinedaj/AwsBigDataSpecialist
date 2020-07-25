@@ -1,0 +1,14 @@
+Amazon Elasticsearch Service:
+    -Technology for doing large scaling analysis reporting
+    -That's not just for search is more like a reporting tool
+    -Can load massive data as faster as spark
+    -Can run queries really quickly at massive datasets
+
+    -Is basically a search engine to search some key into documents
+        datasets or something, can search for documents which contains
+        some kind of words or something like
+    -Fundamentally is a powerful to make distributed search and analysis
+
+    -Includes some tools like Kibana to visualize the results from Elasticsearch
+    -Data pipeline can stream data from many sources into the elasticSearch cluster
+    

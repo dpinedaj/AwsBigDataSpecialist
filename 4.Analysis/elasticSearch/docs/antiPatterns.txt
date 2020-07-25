@@ -1,0 +1,7 @@
+Amazon ES anti-patterns:
+    -OLTP ->On Line Transactions Processing
+        -ES is not good on transactions
+        -RDS or DynamoDB may be better
+    -Ad-hoc data querying -> dinamic querying depending on an specific id or field
+        -Athena is better
+    -Remember Amazon ES is primarily for search & analytics

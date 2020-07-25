@@ -1,0 +1,66 @@
+In this exercise we will go forward with requirement 6: Data warehousing and visualization
+
+1.Reply the exercise from Kinesis Firehose, creating the firehose flow to load logs data to S3
+
+2.Go to AWS Glue - Crawlers
+    -> Click on Add crawler
+        -name order data
+        -Everything as default
+        ->Click on next
+
+        -data store: S3
+        -Crawl data in : Specified path in my account
+        -Include path: (Select the bucket)
+        -Exclude patterns: es/**
+        ->Click on next
+
+        -Add another data store: No
+        ->Click on next
+
+        -Create an IAM role
+            -name: OrderData
+        ->Click on next
+
+        -Frequency: Run on demand
+        ->Click on next
+
+        ->Click on Add database
+            -Database name: orderlogs
+            ->Click on create
+        -No prefix:
+        ->Click on next
+
+        ->Click on Finish
+        ->Click on Run it now
+
+    ->Go to Databases and check the tables
+        ->Click on Edit schema
+            -> in Column names, click and change it
+            col0 => InvoiceNo
+            col1 => StockCode
+            col2 => Description
+            col3 => Quantity
+            col4 => InvoiceDate
+            col5 => UnitPrice
+            col6 => CustomerID
+            col7 => Country
+            partition_0 => year
+            partition_1 => month
+            partition_2 => day
+            partition_3 => hour
+
+3. Go to Amazon Athena service
+    ->Check if the database is here ready to use
+    -Check in tables the table fields
+    -in editor run 
+                "SELECT description, count(*) 
+                from orderlogs_sundogedu 
+                where country='France' and year='2019' and month='02'
+                group by description"
+            
+            -->Change the table name and check the year and month
+
+
+
+
+

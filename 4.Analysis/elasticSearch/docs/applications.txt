@@ -1,0 +1,9 @@
+ElasticSearch Applications:
+    -Full-text search
+        -mirror-web -> Can process 1 Million of docs per hour
+    -Log Analytics
+    -Application monitoring
+        -Can monitore a server on real time incoming data
+    -Security analysis
+    -Clickstream analyics
+    

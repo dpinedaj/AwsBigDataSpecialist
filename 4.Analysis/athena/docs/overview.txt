@@ -1,0 +1,15 @@
+Amazon Athena:
+    -Querying engine
+    -Interactive query for S3 using a SQL interface
+        -No need to load data, it stays in S3
+    -Presto under the hood
+    -Serverless
+    -Supports many data formats
+        -CSV
+        -JSON
+        -ORC
+        -Parquet
+        -Avro
+    -Unstructured, semi-structured or structured
+
+    

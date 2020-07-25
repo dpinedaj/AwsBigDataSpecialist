@@ -1,0 +1,23 @@
+Documents:
+    -Document storage and retrieval engine
+    -Not just txt, can work with json
+
+Types:
+    -Define schema and mapping shared by documents that represent
+        same sort of thing
+
+Indices:
+    -An index powers search into all documents within a collection
+        of types. Contain inverted index that let you search
+        across everything within them at once
+
+    -An index is split into shards
+        -Each shard may be a different node in a cluster
+        -Every shard is a self-container Lucene index of its own
+                -> Every shard is a mini elasticSearch engine by it's own
+
+    -Redundancy:
+        -Each index has some primary shards and some replicas
+        -The application should round-robin requests amongst nodes
+        -Write requests are routed to the primary shard, then replicated
+        -Read requests are routed to the primary or any replica

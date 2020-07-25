@@ -1,0 +1,10 @@
+Some Features:
+    -Schema discovery:
+        -That's how the column names in a SQL are found,
+         it can analyze data incoming in the stream and check that
+        -Random cut forest:
+            -SQL function used for anomaly detection on numeric columns in a stream
+            -They're specially proud of this because they published a paper on it
+            -It's a novel way to identify outliers in a data set so you can
+                handle them however yo need to
+            -Example: detect anomalous subway ridership during the NYC marathon

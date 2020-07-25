@@ -1,0 +1,13 @@
+Athena cost model:
+    -Pay as you go:
+        -$5 per TB scanned
+        -Successful or cancelled queries count,
+            failed queries do not
+        -No charge for DDL (CREATE/ALTER/DROP etc.)
+    -Save LOTS of money by using columnar formats
+        -ORC, Parquet
+        -Save 30-90% and get better performance
+
+
+        
+    -Glue and S3 have their own charges***

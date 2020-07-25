@@ -1,0 +1,5 @@
+Anti Patterns:
+    -Highly formatted reports or visualizations
+        -Use QuickSight for it
+    -ETL
+        -Use Glue instead

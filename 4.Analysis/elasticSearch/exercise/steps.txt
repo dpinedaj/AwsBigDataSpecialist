@@ -1,0 +1,157 @@
+This exercise will perform the requirement 5 of the cadabra app (Near-real-time log analysis)
+
+1.Use the EC2 server created to generate logs for kinesis (Or Create a new one if is needed)
+
+    -Run "wget http://media.sundog-soft.com/AWSBigData/httpd.zip"
+    -Run "unzip httpd.zip"
+    -Run "cd httpd"
+    -Run "less ssl_access_log"
+    -Run "cd"
+    -Run "sudo mv httpd /var/log/httpd"
+
+2.Go to Amazon ElasticSearch Service in console
+    ->Click on create a new domain
+
+    -Deployment type: "Development and testing"
+    -ElasticSearch version "6.4"
+    ->Click on Next
+
+    -Elasticsearch domain name: "Cadabra"
+    -Instance type: m4.large.elasticsearch(default)    
+    -Number of instances: 1
+    -Storage:
+        -Storage type: EBS
+        -EBS volume type: general purpose (SSD)
+        -EBS storage size per node*: 10
+    
+    -Everything else as default and click on next
+
+    -Network configuration:
+        -For this time will be public access but generally is recomended to generate the VPC and configure it
+        
+    -Go to "My Account"
+        -Copy the Account Id number
+
+    -Go back to the service
+
+    -Access policy:
+        -Set the domain access policy to: click on select a template: Allow or deny access to one or more AWS accounts or IAM users
+            -Effect: Allow
+            -Account ID ---> Copy the Account ID
+            -> Click on OK to commit
+
+    -> Click on next
+
+    -> Click on confirm to commit
+
+3. Create Kinesis Firehose stream:
+    -Name: WebLogs
+    -Source: Direct PUT or other sources
+    -> Click on next
+
+    -Record transformation: Enabled
+        ->Lambda function: Click on create new
+            --> Apache log to JSON (Blueprint)
+            -> In lambda consnole if there's default author from scratch:
+                -Select Use a blueprint and search Apache log to Json
+                -If there's not this blueprint, go to "Browse serverless app repository"
+                    -> Search "apache json firehose"
+                        ->Select "Kinesis-firehose-apachelog-to-json"
+
+                        ->Go to source code on github
+                            ->Click on index.js
+                            ->Click on Raw
+                            ->Copy content
+
+                ->Go back to lambda functions, Author from scratch
+                    -Name: LogTransform
+                    -Runtime: Node.js 10x
+                    -Create new role
+                    ->Click on create function
+
+                ->Scroll down to editor
+                    -Remove editor content and copy the clipboard content
+
+                ->Scroll down to timeout:
+                    -1 minute of timeout
+
+    -> Go back to kinesis firehose configuration
+    - Choose lambda function made
+    -Record format conversion: Disabled
+    ->Click on next
+
+    -Destination:Amazon Elasticsearch Service
+    -Domain: Cadabra
+    -Index: weblogs
+    -Index rotatoin: Every day
+    -Type: weblogs
+    -Retry duration: 300 seconds
+
+    -Backup mode: Failed records onlyt
+    -Backup S3 bucket: "orderlogs-sundogedu" --> Check if need to create a new one and select it here
+    -Backup S3 bucket prefix: "es/"
+    -> Click on next
+
+    -Buffer size: 5 MB
+    -Buffer interval: 60 seconds
+    -Compression Disabled
+    -Encription Disabled
+    -Error logging Enabled
+    -IAM role: Create a new one
+        -Set as default and click in Allow
+    -> Click on next
+
+    ->Here check that Elasticsearch domain is currently running before continue
+    -> Click on Create delivery stream to commit
+
+
+4. Configure the kinesis agent in EC2 server
+    -Install it if isn't installed from previous exercises
+    -Run "sudo nano /etc/aws-kinesis/agent.json"
+        -Copy awsAccessKeyId and awsSecretAccessKey as in the previous exercises
+        -Delete the previous flows and create a new one (check the file agent.txt)
+    -Run "sudo service aws-kinesis-agent restart"
+    -Run "tail -f /var/log/aws-kinesis-agent/aws-kinesis-agent.log" # To check the agent works
+
+5. Go to Elasticsearch console to check the domain created
+    -Check in indices the created indices
+    -Modify access policy to make easy the connection with kibana (just for example case, 
+        always is recommended to configure it correctly in permissions and VPC)
+    ->Click on Modify access policy
+        -Check the file kibana-access.txt --> insert your IP address(public ip) and account ID in the file
+        -Add the file content as another Statement in the policy
+        ->Click on Submit to commit
+
+6. Go to Elasticsearch console in overview
+    -Click on Kibana url
+        -In Kibana click on Management
+            -Index Patterns
+                -Index pattern: weblogs"
+                ->Click on next step
+                -Time Filter field name: @timestamp
+                ->Click on create index pattern
+
+        -On right-uper corner of the webpage click on "Last 15 minutes"
+            -Absolute:
+                -From: <Check the timestamp needed>
+                -To: <Check the timestamp needed>
+        -Check now the weblogs data as an histogram (if not, check on discover tab)
+        - On upper search bar search "response:500" to check an example of filtering
+        
+        ->Click on Visualize tab (To create a custom visualization for the hard way)
+            -Create visualization:
+                -Vertical Bar
+                    -Select the index (weblogs")
+                        -Add a filter:
+                            -response   is   500
+                        -Buckets:
+                            -X axis
+                            -Aggregations:
+                                Date Histogram
+                            -Field:
+                                @timestamp
+                            -Interval:
+                                Hourly
+
+
+

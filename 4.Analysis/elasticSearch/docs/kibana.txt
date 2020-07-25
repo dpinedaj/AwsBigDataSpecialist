@@ -1,0 +1,4 @@
+Kibana:
+    -Grants a dashboard designing tool to access data from elasticSearch cluster
+    -Can load specific queries from data and show dinamic data using it
+    

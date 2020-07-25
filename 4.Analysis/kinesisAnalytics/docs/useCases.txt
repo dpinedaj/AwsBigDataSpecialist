@@ -1,0 +1,10 @@
+Common use-cases:
+    -Streaming ETL
+        -Sensor store
+            -Organize data, transform data, check schema
+    -Continuos metric generation
+        -i.e mobile game, to compute the top players every minute
+        -i.e traffic of the website can be proccesed in route
+    -Responsive analytics
+        -i.e computing the availability of success reading customer API at a time "CloudWatch"
+        

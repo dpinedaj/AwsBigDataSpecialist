@@ -1,0 +1,9 @@
+Kinesis Analytics:
+    -His behavior is like an intermediate service to check stream errors computing with some SQL queries
+    -System for querying streams of data continuosly
+    -Can receive data from Data streams or data Firehose
+    -Can use SQL to analyze data from source streams and static info from an S3 bucket or any datalake as reference
+        -Can check if there's some issues in processing aplications
+        -Can check if types mismatch 
+    -The output stream can be stored using kinesis data streams or kinesis data firehose
+    -Lambda may be involved into to can send the data into the services you want

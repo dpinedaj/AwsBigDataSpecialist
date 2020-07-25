@@ -1,0 +1,121 @@
+Here we will cover the requirement 4 from cadabra's web application
+
+Here will be collected the server logs using Amazon Kinesis Data Stream
+    After it, it will be analyzed using Kinesis Data Analytics,
+    After it, it will be collected from Analytics again with Kinesis Data Stream
+    After it, will be taken using a lambda function and it pass it to a SNS
+
+1. Repeat the exercise of Kinesis Data Stream to load Logs from an EC2 server
+
+2. Create a new kinesis data stream
+    -name: OrderRateAlarms
+    -Number of shards: 1
+    
+    -> Click Create create stream to commit
+
+3. Go to Kinesis Data Analytics:
+    -> Click on create application
+        -Application name: TransactionRateMonitor
+        -Runtime: SQL
+        -> Click Create Application to commit
+
+        -> Click in connect streaming data
+            source: Kinesis Stream
+            Kinesis Stream: "CadabraOrders" (Or the source from step 1)
+            
+            ---> Remember the "in-application stream name", is needed for SQL coding
+
+            --Everything else as default
+            -> Click on Discover schema to enable feature
+
+            (If there's no data preview, reload data into EC2)
+                    -Login EC2 with kinesis agent "LogGenerator"
+                    -Run "sudo ./LogGenerator.py"
+                    -Run "taill -f /var/log/aws-kinesis-agent/aws-kinesis-agent.log"
+
+                    -Wait some seconds....
+
+            -> Click on Retry schema discovery
+
+            -> Click on save and continue
+
+        -> Click on Go to SQL editor
+            -> Click on yes, start application
+
+            -In editor copy the content from "analytics-query.txt" ---> Check the in-application stream name in code
+
+            -> Click on Save and run SQL
+            
+            -Scroll down and check the results.....
+
+            -Can go and send more logs from LogGenerator to check more results.....
+
+
+        -> Click on Destination tab
+            -> Click on Connect to a destination
+            
+                -Destination: Kinesis Stream
+                -Kinesis Stream: "OrderRateAlarms"  (Or the source from step 2)
+
+                -In-application stream:
+                    -Connect in-application stream: "Choose an existing in-application stream"
+                    -In-application stream name: "TRIGGER_COUNT_STREAM"
+                    -Output format: JSON
+                    -Access permissions: Create
+                    
+                    -> Click on save and continue
+
+4. Go to IAM to create a lambda's role:
+    -Create new role:
+        -AWS Service: Lambda
+            -> Click on Next: permissions
+                -Search "AWSLambdaKinesisExecutionRole" and checkin
+                -Search "AmazonSNSFullAccess" and checkin
+                -Search "CloudWatchLogsFullAccess" and checkin
+                -Search "AwsLambdaBasicExecutionRole" and checkin
+
+            -> Click on next: tags
+                -blank
+            -> Click on next: review
+                -Role name: "LambdaKinesisSNS"
+                -> Click on create role
+
+5. Go to Lambda:
+    -Create function
+        -Name: TransactionRateAlarm
+        -Runtime: Python 2.7
+        -Role: "LambdaKinesisSNS"
+        -> Click on Create Function
+
+    -> On function:
+        -Trigger: Kinesis:
+            -> Scroll down to configure it:
+            -Kinesis stream: "OrderRateAlarms"
+            -Everything else as default:
+            -> Click on Add
+
+        -> Click on the function to configure it
+            -> Scroll down to Bassic settings
+            -Timeout 1 min 0 secs
+            -> Scroll up to editor:
+            -Copy the content from lambda.txt to the editor
+                ->The topic_arn must wait to create the SNS service
+
+6. Go to SNS:
+    -Create topic:
+        -Topic Name: "CadabraAlarms"
+        -Display Name: "Cadabra"
+
+        -> Create subscription:
+            -Protocol: SMS
+            -Endpoint: <My own cellphone>
+            -> Click on create subscription
+
+            ->Scroll up, click on publish to topic (TO TEST IT)
+                -Subject: test
+                -format: Raw
+                -Message: This is a test
+                -> Click on publick message
+
+    -> Copy ARN to the lambda function
+    -> Click on SAVE in Lambda function
