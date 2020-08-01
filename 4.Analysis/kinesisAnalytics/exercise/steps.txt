@@ -105,17 +105,18 @@ Here will be collected the server logs using Amazon Kinesis Data Stream
     -Create topic:
         -Topic Name: "CadabraAlarms"
         -Display Name: "Cadabra"
+        -> Click on create topic
 
-        -> Create subscription:
-            -Protocol: SMS
-            -Endpoint: <My own cellphone>
-            -> Click on create subscription
+    -> Create subscription:
+        -Protocol: SMS
+        -Endpoint: <My own cellphone>
+        -> Click on create subscription
 
-            ->Scroll up, click on publish to topic (TO TEST IT)
-                -Subject: test
-                -format: Raw
-                -Message: This is a test
-                -> Click on publick message
+        ->Scroll up, click on publish to topic (TO TEST IT)
+            -Subject: test
+            -format: Raw
+            -Message: This is a test
+            -> Click on publick message
 
     -> Copy ARN to the lambda function
     -> Click on SAVE in Lambda function

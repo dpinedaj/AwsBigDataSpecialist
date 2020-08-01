@@ -1,0 +1,12 @@
+Redshift:
+    -Distributed Data WareHouse
+    -PetaByte-scale Data WareHouse 
+
+-Whatt Is:
+    -Designed for OLAP, not OLTP
+    -Cost effective
+    -SQL, ODBC, JDBC interfaces
+    -Scale up or down on demand
+    -Build-in replication & backups
+    -Monitoring via CloudWatch
+
