@@ -1,0 +1,18 @@
+Sort Keys:
+    -Can be defined one or more columns as sort keys
+    -It provides an order to save table using this sorting key's order.
+    -Also save minimum and maximum value to perform quicklier queries against the data
+    -Is important to decide which column will be the best column:
+        -The best choice is to select a column which the queries commonly search an specific interval of his
+    
+-Single Sort Key:
+    -Single Column: Single value to sort the data
+    -i.e: Date, just sort data date's order:
+        -Take data from 3/18/2019 to 3/19/2019
+
+-Compound Sort Key:
+    -"Default Sort Type"
+    -All the columns have the sort definition in the order they're defined
+
+-Interleaved Sort Key:
+    -Can define the sort order between the columns and can filter by an specific column prefix

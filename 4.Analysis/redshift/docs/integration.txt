@@ -1,0 +1,16 @@
+Integration with other services:
+    -S3:
+        -Can be used parallel processing to import data from s3 or unload data to it
+
+    -DynamoDB:
+        -Using copy command can load a dynamoDB table into redshift
+    
+    -EMR / EC2:
+        -Using copy command can load data from the clusters to redshift
+
+    -Data Pipeline:
+        -Automate data movement through redshift tables
+
+    -Database Migration Service (DMS):
+        -Can load a whole existing DW into Redshift.
+

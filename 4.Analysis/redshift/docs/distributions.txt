@@ -1,0 +1,18 @@
+Auto:
+    -Distribute the data based on his size.
+
+Even:
+    -Rows distributed across slices in round-robin
+    -Individual slices keep in the nodes in a circle thinking
+    -Just write it in the first one, the next in the next one and keep rounding
+
+
+Key:
+    -Rows distributed based on one column
+    -Help to queries to find the slice with a specific key hash
+
+
+All distribution:
+    -Copy ALL the table copy in every node
+    -Take much longer to read or load data into tables, also move because are not optimized
+    -low dimension tables can be benified with this distribution

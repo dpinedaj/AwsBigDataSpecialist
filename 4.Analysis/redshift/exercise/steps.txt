@@ -1,0 +1,64 @@
+Right now we will perform the requirement 6: Data warehousing and visualization
+-With Redshift we will perform a managed solution instead of serverless Glue-Athena's one
+
+
+Redshift Spectrum steps:
+
+1. Make sure that the data from previous exercises are in S3 (maybe must be needed to create
+    a Kinesis Firehose again and generate logs with the python script)
+    and is necessary to perform again the glue data crawler to get data into Glue Data Catalog
+
+2. Go to Amazon IAM in the AWS Console
+    -Roles
+        ->Click on Create Role
+            -AWS service
+                -Redshift
+                -Redshift-Customizable
+                ->Click on Next: Permissions
+
+                Select:
+                    -AmazonS3ReadOnlyAccess
+                    -AWSGlueConsoleFullAccess
+                    ->Click on Next:Tags
+                ->Click on Next: Review
+                -Role name: RedshiftSpectrum
+                --->Copy the role arn and paste into an accesible place
+                ->Click on Create Role
+
+2. Go to Amazon Redshift in the AWS Console
+    ->Click on Create cluster
+        -Select the cheaper version (dc2.large)
+        -1 node
+        -Cluster identifier: cadabra
+        -database port: 5439
+        -Master user name: select one
+        -Master user password: select one
+        -Cluster permissions:
+            ###It's important to grant permissions through Glue Data Catalog and S3
+            -Select IAM Role
+            -> Click on Add IAM role
+        -Additional configurations:
+            -default settings
+        ->Click on Create cluster
+
+3. Go into cadabra cluster
+    ->Click on Editor
+        -Log in with password created previously
+
+        -Create external schema:
+            -On editor write:
+                -"CREATE external schema orderlog_schema from data catalog
+                  database 'orderlogs'
+                  iam_role '<arn_role pasted in step 2>'
+                  region 'us-east-1'"
+            ->click on Run
+
+        ->Refresh Data objects
+        -Check if schema is existing
+        -Explore the table
+            -On editor write:
+                -"SELECT description, count(*) FROM orderlog_schema.orderlogs_sundogeku
+                  WHERE country='France' and year='2020' and month='08'
+                  GROUP BY description"
+            ->Click on Run
+

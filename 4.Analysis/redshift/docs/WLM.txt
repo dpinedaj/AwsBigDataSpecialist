@@ -1,0 +1,26 @@
+Redshift Workload Management (WLM):
+    -Priorize short, fast queries vs long, slow queries
+    -Query queues
+    -Via console, CLI, or API
+
+Automatic Worload Management:
+    -Creates up to 8 queues
+    -Large queries (ie big hash joins) -> concurrency lowered
+    -Small queries (ie inserts, scans, aggregations) -> concurrency raised
+    -Can be defined boundary conditions and the steps to follow if any boundary is passed
+    
+    -Configuring query queues:
+        -Priority
+        -Concurrency scaling mode
+        -User groups
+        -Query groups
+        -Query monitoring rules
+
+Manual Workload Management:
+    -One default queue with concurrency level of 5 (5 queries at once)
+    -Superuser queue with concurrency level 1
+    -Define up to 8 queues, up to concurrency level 50
+        -Each can have defined concurrency scaling mode, concurrency level, user groups
+            query groups, memory, timeout, query monitoring rules
+        -Can also enable query queue hopping
+            -Timed out queries "hop" to next queue to try again

@@ -1,0 +1,15 @@
+Amazon RDS:
+    -Used not generally for big data, just small data
+    -Used as backend for a website or something like
+    -Offer full ACID compliance
+    -Relational Database which can host a lot of relational databases:
+        -Amazon Aurora
+        -MySQL
+        -PostgreSQL
+        -MariaDB
+        -Oracle
+        -SQL Server
+    
+    -Not for "big data"
+        -Not is goot idea use it for big data
+        -Or in the context of migrating from RDS to Redshift

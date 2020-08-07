@@ -1,0 +1,10 @@
+Vacuum Command:
+    -Recovers space from deleted rows
+    -VACUUM FULL:
+        -default vacuum operation, resort all the rows and recover space from deleted rows
+    -VACUUM DELETE ONLY
+        -Same as full but excepts the sorthing phase, just recover space from deleted rows
+    -VACUUM SORT ONLY
+        -Just resort the table but not recover space
+    -VACUUM REINDEX
+        -Is for reinitializing index, it perform a check of sort keys, reindex the table and after it perform a full vacuum

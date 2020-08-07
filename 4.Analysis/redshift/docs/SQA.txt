@@ -1,0 +1,10 @@
+Short Query Acceleration (SQA):
+    -Prioritize short-running queries over longer-running ones
+    -Short queries run in a deadicated space, won't wait in queue behind long queries
+    -Can be used in place of WLM queues for short queries
+
+    -Works with:
+        -CREATE TABLE AS (CTAS)
+        -Read-only queries (SELECT statements)
+    -Uses machine learning to predict a query's execution time
+    -Can configure how many seconds is "short"
