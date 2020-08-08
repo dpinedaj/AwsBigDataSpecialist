@@ -18,7 +18,8 @@ In this exercise we will go forward with requirement 6: Data warehousing and vis
         ->Click on next
 
         -Create an IAM role
-            -name: OrderData
+            -name: OrderData #Is important to check the permissions of roles, if create it grants
+                             # permissions only to this s3 bucket
         ->Click on next
 
         -Frequency: Run on demand
