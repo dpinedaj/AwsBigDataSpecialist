@@ -25,7 +25,7 @@ Redshift Spectrum steps:
                 --->Copy the role arn and paste into an accesible place
                 ->Click on Create Role
 
-2. Go to Amazon Redshift in the AWS Console
+3. Go to Amazon Redshift in the AWS Console
     ->Click on Create cluster
         -Select the cheaper version (dc2.large)
         -1 node
@@ -41,7 +41,7 @@ Redshift Spectrum steps:
             -default settings
         ->Click on Create cluster
 
-3. Go into cadabra cluster
+4. Go into cadabra cluster
     ->Click on Editor
         -Log in with password created previously
 
