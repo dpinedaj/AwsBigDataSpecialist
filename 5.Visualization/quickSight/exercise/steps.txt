@@ -1,0 +1,41 @@
+This exercise will perform a part if the requirement 6
+
+
+1. 
+
+
+2. Go to VPC
+    -Go to Security groups
+    -Check for Redshift Security group:
+        -Edit inbound rules:
+            -Redshift - TCP - 5339 --> Anywhere
+            -SSH - TCP - 22 --> Anywhere
+
+3. Go to Quicksight service
+    -Register the account and ask for standard subscription
+    -Account name: Cadabra
+    -Notificacion email address: <youremail>
+    -Check in Amazon S3:
+        -Select specific S3 bucket where are the app's data
+    -> Click on Finish to commit
+
+
+4. Login into QuickSight
+    ->Click on New Analysis on left-top
+    ->Click on New Data Set on left-top
+    ->Click on Redshift
+        -Source name: Cadabra orders
+        -Database name: dev (or the created)
+        -Username: The selected on step 1
+        -password: The selected on step 1
+
+        -> Click on create data source to commit
+        
+        -Select Schema: orderlog_schema (the external one created on step 1)
+        -Select table on schema
+        -> Click on Select to commit
+        -> Click on Visualize
+
+    - On visualization dashboard, check different auto generated graphs
+    - On top-right check on capture to check the storyboard
+    

@@ -1,0 +1,30 @@
+Visual Types:
+    -AutoGraph:
+        - Just Select the columns and quicksight will decide what kind of graph is the best to represent that information
+            based of the type of the data
+
+    -Bar Charts:
+        - Did for comparisons and data distribution (Histogram)
+        
+    -Line graphs:
+        - Changes over time
+
+    -Scatter plots, heat maps:
+        - Correlation between two or more variables
+
+    -Pie graphs, tree maps:
+        - Aggregations
+
+    -Pivot tables:
+        - Intersections between attributes
+        - Indexing tabular data
+
+    -Stories: 
+        - Create a narrative specifying how is the behavior of the data through the story
+        - Evolution of an analysis for collaboration
+
+    -KPIs
+        - Performance Indicators
+
+    -Geospatial Charts (maps)
+    

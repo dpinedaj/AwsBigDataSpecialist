@@ -1,0 +1,9 @@
+SPICE:
+    -Super-fast, Parallel, In-memory Calculation Engine
+    -Data sets are not just visualized, they're imported into SPICE ---> Similar to Redshift
+        -Uses columnar storage, in-memory, machine code generation
+        -Accelerates interactive queries on large datasets
+    -Each user gets 10GB of SPICE
+    -Scales to hundreds of thousands of users
+
+

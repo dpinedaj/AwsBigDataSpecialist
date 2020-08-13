@@ -1,0 +1,19 @@
+What is QuickSight?
+    -Serverless solution to build visualizations, perform ad-hoc analysis
+        Check visualizations anytime, on any device
+    -Can extract exposed data
+
+
+
+Data Sources:
+    -Redshift
+    -Aurora / RDS
+    -Athena
+    -EC2-hosted databases
+    -Files (s3 or on premises)
+        -Excel
+        -CSV, TSV
+        -Common or extended log format
+    -Data preparation allows limited ETL
+    -Is important to perform ETL before visualizations, for example change field names of a csv
+        to perform better visualizations
