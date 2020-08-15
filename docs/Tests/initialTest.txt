@@ -1,12 +1,13 @@
 Initial test 13/06/2020
 
-1. C --> A
-2. D --> B
-3. B --> B
-4. C --> D
-5. B --> C
-6. A,C -->A,C 
-7. B --> B
-8. D --> B
-9. B --> C
-10.C --> A
+Daniel -- Jhon
+1. C -- B --> A
+2. D -- B --> B
+3. B -- A --> B
+4. C -- D --> D
+5. B -- C --> C
+6. A,C --A -->A,C 
+7. B -- A --> B
+8. D -- D --> B
+9. B -- A --> C
+10.C -- A --> A

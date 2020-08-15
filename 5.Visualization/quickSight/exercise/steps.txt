@@ -1,7 +1,7 @@
 This exercise will perform a part if the requirement 6
 
 
-1. 
+1. For this exercise the data logs must be in S3
 
 
 2. Go to VPC
