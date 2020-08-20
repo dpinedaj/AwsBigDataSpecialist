@@ -1,0 +1,8 @@
+Kinesis Data Streams:
+    -Uses SSL endpoints using the HTTPS protocol to do encryption in flight
+    -AWS KMS provides server-side encryption [Encryption at rest]
+    -For client side-encryption, you must use your own encryption libraries
+        -->There's no support for client side encryption
+    -Supported Interface VPC Endpoints /Private Link - access privately
+    -KCL(Kinesis Client Library) - must get read / write access to DynamoDB table
+    

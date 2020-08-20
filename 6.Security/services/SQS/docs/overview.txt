@@ -1,0 +1,6 @@
+SQL (Simple Queue Service):
+    -Encryption in flight using the HTTPS endpoint
+    -Server Side Encryption using KMS
+    -IAM policy must allow usage of SQS
+    -SQS queue access policy
+    -Client-side encryption must be implemented manually

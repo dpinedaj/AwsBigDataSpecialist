@@ -1,0 +1,10 @@
+Glue:
+    -IAM policies for the Glue service
+    -Configure Glue to only access JDBC through SSL
+    -Data Catalog: Encrypted by KMS
+        -Automated data that come insights is encrypted
+    -Connection passwords: Encrypted by KMS
+    -Data written by AWS Glue -- Security Configurations:
+        -S3 encryption mode: SSE-S3 or SSE-KMS
+        -CloudWatch encryption mode
+        -Job bookmark encryption mode

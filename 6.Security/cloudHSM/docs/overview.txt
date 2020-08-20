@@ -1,0 +1,14 @@
+Cloud HSM:
+    -KMS => AWS manages the software for encryption
+    -CloudHSM => AWS provisions encryption hardware
+    -Dedicated Hardware (HSM = Hardware Security Module)
+    -You manage your own encryption keys entirely (not AWS)
+    -The cloudHSM hardware device is tamber resistant.
+    -FIPS 140-2 Level 3 compliance
+        -Level of compliance that allows to make some regulations
+    -CloudHSM clusters are spread across multi AZ (HA)
+    -Supports both symmetric and asymmetric encryption (SSL/TLS) Keys
+    -No free tier available
+    -Must use the CloudHSM Client Software
+
+    

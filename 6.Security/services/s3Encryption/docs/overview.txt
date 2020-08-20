@@ -1,0 +1,7 @@
+S3 Encryption for Objects:
+
+    Methods:
+        -SSE-S3: encrypt S3 objects using heys handled & managed by AWS
+        -SSE-KMS: leverage AWS Key Management Service to manage encryption keys
+        -SSE-C: when you want to manage your own encryption keys
+        -Client side encryption

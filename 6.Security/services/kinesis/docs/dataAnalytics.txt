@@ -1,0 +1,3 @@
+Kinesis Data Analytics:
+    -Attach IAM role so it can read from Kinesis Data Streams and reference sources and write to an output destination
+        (example Kinesis Data Firehose)

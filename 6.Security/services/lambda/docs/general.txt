@@ -1,0 +1,13 @@
+Lambda:
+    -IAM roles atteched to each lambda function
+    -Need permissions to put data to:
+        -Sources
+        -Targets
+    -KMS encryption for secrets
+        -If are passed secrets to Lambda, can unencrypt these secrets and manage the KMS service using IAM role
+
+    -SSM parameter store for configurations
+        -Can even encrypt the secrets to configurate KMS
+    -CloudWatch Logs
+    -Deploy in VPC to access private resources
+    

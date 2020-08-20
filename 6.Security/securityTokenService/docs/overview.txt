@@ -1,0 +1,14 @@
+Security Token Service (STS):
+    -Allows to grant limited and temporary access to AWS resources.
+    -Token is valid for up to one hour (must be refreshed)
+    -Cross Account access
+        -Allos user from one AWS account access resources in another
+    
+    -Federation (Active Directory)
+        -Provides a non-AWS user with temporary AWS Ccess by linking users Active Directory credentials
+        -Uses SAML (Security Assertion markup language)
+        -Allows single sign on(SSO) which enaples users to log in to AWS console without assigning IAM credentials
+
+    -Federation with third party providers /Cognito
+        -User mainly in web and mobile applicatoins
+        -Make use of Facebook/Google/Amazon etc to federate them

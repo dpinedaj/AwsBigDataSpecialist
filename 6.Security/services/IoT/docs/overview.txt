@@ -1,0 +1,13 @@
+IoT Policies:
+    -Attached to X.509 certificates or Cognito Identities into devices and it control everything
+    -Able to revoke any device at any time
+    -IoT policies are JSON documents
+    -Can be atteched to groups instead of individual Things.
+
+
+IAM Policies:
+    -Attached to users, group or roles
+    -Used for controlling IoT AWS APIs
+
+
+Attach roles to Rules Engine so they can perform their actions

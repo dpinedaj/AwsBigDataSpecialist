@@ -1,0 +1,9 @@
+ElasticSearch:
+    -VPC procides network isolation
+    -policy to manage security further
+    -Data security by encrypting data at-rest using KMS
+    -Encryption in-transit using SSL
+
+-IAM or cognito based authentication
+-Cognito allow end-users to log-in to Kibana thorugh enterprise
+    identity providers such as Active Directory using SAML

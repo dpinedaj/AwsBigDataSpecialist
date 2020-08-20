@@ -1,0 +1,6 @@
+-Encryption using keys handled & managed by AWS S3
+-Object is encrypted server side
+-AES-256 encryption type
+-Must set header: "x-amz-server-side-encryption":"AES256" --> When is sent the data to S3
+
+

@@ -1,0 +1,7 @@
+Encryption in flight (SSL):
+    -In some transactions like credit card data is so important
+        that the data isn't available in flight
+    -Data is encrypted before sending and decrypted after sending
+    -SSL certificates help with encryption (HTTPS)
+    -Ensures no MITM (man in the middle attack) can happen
+    

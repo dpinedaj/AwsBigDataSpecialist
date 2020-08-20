@@ -1,0 +1,13 @@
+Quicksight:
+    -Standard edition:
+        -IAM users
+        -Email based accounts
+
+    -Enterprise edition:
+        -Active Directory
+        -Federated Login
+        -Supports MFA (Multi Factor Authentication)
+        -Encryption at rest and in SPICE
+    
+    -Row level security to control which users can see which rows
+    

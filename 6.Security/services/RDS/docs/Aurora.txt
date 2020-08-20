@@ -1,0 +1,8 @@
+Aurora:
+    -Very similar to RDS
+    -VPC provides network isolation
+    -Security Groups control network access to DB Instances
+    -KMS provides encryption at rest
+    -SSL provides encryption in-flight
+    -IAM authentication is supported by PostgreSQL and MySQL
+    -Must manage user permissions within the database itself

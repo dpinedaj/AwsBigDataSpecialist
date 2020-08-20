@@ -1,0 +1,8 @@
+Athena:
+    -IAM policies to control access to the service
+    -Data is in S3: IAM policies, bucket policies & ACLs
+    -Encryption of data according to S3 standars: SSE-S3, SSE-KMS, CSE-KMS
+    -Encryption in transit using TLS between Athena and S3 and JDBC
+    
+
+    -Fine grained access using the AWS Glue Catalog

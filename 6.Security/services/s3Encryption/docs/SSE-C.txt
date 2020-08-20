@@ -1,0 +1,4 @@
+-SSE-C: Server-side encryption using data keys fully managed by the customer outside of AWS
+-Amazon S3 does not store the encryption key you provide
+-HTTPS MUST be used
+-Encryption key must provide in HTTP headers, for every HTTP request made

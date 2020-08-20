@@ -7,7 +7,6 @@ Glue ETL:
         -Can provision additional "DPUs" (data processing units) to increase
          performance of underlying Spark Jobs
 
-
 General:
     -An Glue ETL can transform data, clean data, Enrich data (before analysis)
         -Generate ETL code in Python or Scala which is modificable

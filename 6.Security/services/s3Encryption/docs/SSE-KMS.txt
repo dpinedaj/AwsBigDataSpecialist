@@ -1,0 +1,4 @@
+-SSE-KMS: encryption using keys handled & managed by KMS
+-KMS Advantages: user control + audit trail
+-Object is encrypted server side
+-Must set header: "x-amz-server-side-encryption": "aws:kms"

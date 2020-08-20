@@ -1,0 +1,10 @@
+Amazon DynamoDB:
+    -Data is encrypted in transit using TLS (HTTPS)
+    -Can be encrypted at rest:
+        -KMS for base tables and secondary indexes
+        -Only for new tables
+        -To migrate un-encrypted table, create new table and copy the data
+        -Encryption cannot be disabled once enabled
+    -Access to tables / API / DAX using IAM
+    -DynamoDB streams do not support encryption
+    -VPC Endpoint is provided trough a Gateway

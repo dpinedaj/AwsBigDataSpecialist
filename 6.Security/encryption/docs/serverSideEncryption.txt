@@ -1,0 +1,7 @@
+Server side encryption at rest:
+    -Data is encrypted after beign received by the server
+    -Data is decrypted before beign sent
+    -It is stored in an encrypted form thanks to a key (usually a data key)
+    -The encryption /decryption keys must be managed somewhere and the server must have
+        access to it
+        

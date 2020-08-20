@@ -1,0 +1,5 @@
+Kinesis Data Friehose:
+    -Attach IAM roles so it can deliver to S3 / ES / Redshift / Splunk
+    -Can encrypt the delivery stream with KMS [Server side encryption]
+    -Supported interface VPC Endpoints / Private Link - Access privately
+    

@@ -1,0 +1,16 @@
+EMR-
+    -Using Ec2 key pair for SSH credentials
+    -Attach IAM to EC2 instances for:
+        -proper S3 access
+        -for EMRFS requests to S3
+        -DynamoDB scans through Hive
+    -EC2 Security Groups
+        -One for master node
+        -Another one for cluster node (core and task)
+    -Encrypts data at-rest: EBS encryption, Open Source HDFS Encryption, LUKS + EMRFS for S3
+    -In-transit encryption: node to node communication, EMRFS, TLS
+    -Data is encrypted before uploading to S3
+    -Kerberos authentication (provide authentication from Active Directory)
+    -Apache Ranger: Centralized Authorization (RBAC - ROle Based Access) - Setup on external EC2
+
+    

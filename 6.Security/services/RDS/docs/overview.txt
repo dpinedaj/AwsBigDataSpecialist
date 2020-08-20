@@ -1,0 +1,9 @@
+RDS:
+    -VPC provides network isolation
+    -Security Groups control network access to DB instances
+    -KMS provides encryption at rest
+    -SSL provides encryption in-flight
+    -IAM policies provide protection for the RDS API
+    -IAM authentication is supported by PostgreSQL and MySQL
+    -Must manage user permissions within the database itself
+    

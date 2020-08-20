@@ -1,0 +1,10 @@
+Redshift:
+    -VPC provides network isolation
+    -Cluster security groups
+    -Encryption in flight using the JDBC driver enabled with SSL
+    -Encryption at rest using KMS or an HSM device (establish a connection)
+    -Supports S3 SSE using default managed key
+    -Use IAM roles for redshift
+    -To access other AWS resources (example S3 or KMS)
+    -Must be referenced in the COPY or UNLOAD command
+    (alternatively paste access key and secret key creds)
