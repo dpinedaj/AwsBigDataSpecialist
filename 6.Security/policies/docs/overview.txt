@@ -1,0 +1,19 @@
+Leveraging variables:
+    -${aws:username}: to restrict users to tables/buckets
+    -${aws:principaltype}: account, user, federated, or assumed role
+    -${aws:PrincipalTag/department}: to restrict using Tags
+    url: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_variables.html
+
+    -${aws:FederatedProvider}: which IdP was used for the user (Cognito, Amazon..)
+    -${www.amazon.com:user_id}, ${cognito-identity.amazonaws.com:sub}...
+    -${saml:sub}, ${sts:ExternalID}
+    url: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#condition-keys-wif
+
+
+For S3:
+    -url: https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html
+
+For DynamoDB:
+    -url: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html
+
+

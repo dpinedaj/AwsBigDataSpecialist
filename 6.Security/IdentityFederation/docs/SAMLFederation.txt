@@ -1,0 +1,4 @@
+For enterprises:
+    -To integrate Active Directory with AWS
+    -Provides access to AWS Console or CLI (through temporary creds)
+    -No need to create an IAM user for each of your employees

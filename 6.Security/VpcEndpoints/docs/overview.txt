@@ -1,0 +1,9 @@
+VPC Endpoints:
+    -Allow you to connect to AWS using a private network instead of the public www network
+    -They scale horizontally and are redundant
+    -They remove the need of IGW, NAT, etc...
+        to access AWS Services
+
+    -Gateway: Provisions a target and must be used in a route table
+        ONLY S3 and Dynamo DB
+    

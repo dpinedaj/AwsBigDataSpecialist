@@ -1,0 +1,5 @@
+For enterprises:
+    -Use only if identity prover is not compatible with SAML 2.0
+    -The identity broker must determine the appropiate IAM policy
+    -Must be codded the custom identity broker, ask to STS for a policy and check if it
+        match

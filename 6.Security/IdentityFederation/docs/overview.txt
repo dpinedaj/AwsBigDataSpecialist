@@ -1,0 +1,17 @@
+What is?
+    -Federation lets users outside of AWS to assume 
+        temporary role for accessing AWS resources
+    -These users assume identity provide access role
+    -Allows a no-aws user from a third' party service to login into AWS service
+        using the third'party service can access temporary to AWS
+    -Federation assumes a from of 3rd party authentication
+        -LDAP
+        -Active Directory
+        -Single Sign On
+        -Open ID
+        -Cognito
+
+    -Using Federation, don't need to create IAM users
+        -user managamant is outside IAM
+
+    

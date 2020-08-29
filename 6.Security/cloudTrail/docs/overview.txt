@@ -1,0 +1,22 @@
+AWS CLoudTrail:
+    -Provides governance, compliance and audit for your AWS Account
+    -Is enabled by default
+    -Get an history of events / API call made within your AWS account by:
+        -Console
+        -SDK
+        -CLoudTrail-AWS Services
+    -Can put logs from CloudTrail into CloudWatch logs
+    -If a resource is deleted in AWS, look intro CloudTrail first
+
+    -Shows the past 90 days of activity
+    -the default UI shows "Create", "modify", or "Delete" events
+    
+
+-CloudTrail Trail:
+    -Get detailed list of all events
+    -Ability to store these events into S3
+    -Can be region specific or global
+
+-Logs have SSE-S3 encryption when placed into S3
+-Control access to S3 using IAM, Bucket Policy, etc...
+
